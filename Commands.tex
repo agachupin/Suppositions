@@ -1,4 +1,12 @@
 \newcommand{\titleuppercase}[1]{\textls[50]{\MakeUppercase{#1}}}
 
-\titleformat{\section}[block]%
-    {\large\bfseries\filcenter}{\thesection}{1em}{\titleuppercase}
+\titleformat{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}%
+{\titleuppercase}
+
+\renewcommand{\proofname}{\upshape\bfseries Proof}
+\theoremstyle{definition}
+\newtheorem{proposition}{Proposition}[section]
+
+\renewcommand{\cftsecfont}{\normalfont}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecpagefont}{\normalfont}
