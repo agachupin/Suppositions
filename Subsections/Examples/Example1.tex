@@ -3,13 +3,55 @@
 
 
 
-\begin{exercise}
+\begin{exercise}{
     Prove that if $a$ is an odd integer, then $a^2 = 8m + 1$ for some %
     $m \in \Z$.
+    }
 \end{exercise}
 
 
 
-\begin{proof}
-    Hello!
+\begin{proof}{
+    This statement can be proven by division into cases.
+    Let $a$ be an odd integer. Then $\exists k \in \Z$ such that %
+    $a = 2k + 1$. Then
+    \begin{align*}{
+        a^2 &= (2k + 1)^2 \\
+            &= 4k^2 + 4k + 1 \\
+            &= 4k(k + 1) + 1.
+        }
+    \end{align*}
+    %
+    Either $k$ is even or odd.
+    \begin{panel}[Case 1: $k$ is even.]{
+        Then $\exists n \in \Z$ such that $k = 2n$. Then
+        \begin{align*}{
+            a^2 &= 4k(k + 1) + 1 \\
+                &= 4(2n)[(2n) + 1] + 1 \\
+                &= 4(4n^2 + 2n) + 1 \\
+                &= 8(2n^2 + n) + 1 \\
+                &= 8m + 1 \text { with } m \in \Z \text { such that } %
+                    m = 2n^2 + n.
+            }
+        \end{align*}
+        }
+    \end{panel}
+    \begin{panel}[Case 2: $k$ is odd.]{
+        Then $\exists n \in \Z$ such that $k = 2n + 1$. Then
+        \begin{align*}{
+            a^2 &= 4k(k + 1) + 1 \\
+                &= 4(2n + 1)[(2n + 1) + 1] + 1 \\
+                &= 4(2n + 1)(2n + 2) + 1 \\
+                &= 4(4n^2 + 6n + 2) + 1 \\
+                &= 8(2n^2 + 3n + 1) + 1 \\
+                &= 8m + 1 \text { with } m \in \Z \text { such that } %
+                    m = 2n^2 + 3n + 1.
+            }
+        \end{align*}
+        }
+    \end{panel}
+    %
+    In both cases, $a^2 = 8m + 1$ for some $m \in \Z$. Therefore, the %
+    statement holds.
+    }
 \end{proof}
