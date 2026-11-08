@@ -8,12 +8,14 @@ abstract: >-
   applications to accessibly define and demonstrate each approach.
 authors:
   - family-names: Gachupin
-    given-names: Alejandro [Esteban]
+    given-names: "Alejandro [Esteban]"
     affiliation: Wake Forest University
     email: gachae25@wfu.edu
+    website: "https://github.com/agachupin"
 keywords:
   - discrete mathematics
   - proof techniques
+  - mathematical proof
 license: CC-BY-NC-SA-4.0
 repository-code: "https://github.com/agachupin/suppositions"
 url: "https://github.com/agachupin/suppositions"
@@ -23,19 +25,22 @@ preferred-citation:
   title: "Suppositions: Standard Proof Techniques in Discrete Mathematics and Example Applications"
   authors:
     - family-names: Gachupin
-      given-names: Alejandro [Esteban]
+      given-names: "Alejandro [Esteban]"
       affiliation: Wake Forest University
+      email: gachae25@wfu.edu
   institution:
     name: Wake Forest University
   year: 2026
   month: 11
   url: "https://github.com/agachupin/suppositions"
+  repository-code: "https://github.com/agachupin/suppositions"
   license: CC-BY-NC-SA-4.0
   languages:
     - en
   keywords:
     - discrete mathematics
     - proof techniques
+    - mathematical proof
   abstract: >-
     This document examines standard proof techniques found in discrete
     mathematics. It combines meticulous explanations with example
