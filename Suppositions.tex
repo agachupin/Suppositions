@@ -9,12 +9,14 @@
 \usepackage{microtype}
 \usepackage[nodisplayskipstretch]{setspace}
 \setstretch{1.15}
+\usepackage{titlesec}
 
 \usepackage{mathtools}
 \usepackage{amssymb}
 \usepackage{amsthm}
 
 \usepackage[hidelinks]{hyperref}
+
 \input{commands}
 
 
@@ -34,7 +36,7 @@ with example applications to accessibly define and demonstrate each approach.}
 https://creativecommons.org/licenses/by-nc-sa/4.0}
 \newcommand{\portfoliocopyright}{Copyright © \portfolioyear\ \portfolioauthor.}
 
-\newcommand{\portfoliorepository}{https://github.com/agachupin/suppositions}
+\newcommand{\portfoliourl}{https://github.com/agachupin/suppositions}
 
 \hypersetup{
     pdftitle            = {\portfoliotitle: \portfoliosubtitle},
@@ -45,7 +47,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0}
     pdfcopyright        = {\portfoliocopyright\ %
     Licensed under \portfoliolicense.},
     pdflicenseurl       = {\portfoliolicenseurl},
-    pdfurl              = {\portfoliorepository},
+    pdfurl              = {\portfoliourl},
     bookmarksnumbered   = {true},
     bookmarksopen       = {true},
     pdfpagelayout       = {OneColumn},
@@ -54,12 +56,9 @@ https://creativecommons.org/licenses/by-nc-sa/4.0}
 
 
 
-\newcommand{\titleuppercase}[1]{\textls[50]{\MakeUppercase{#1}}}
+\renewcommand{\abstractname}{\large\titleuppercase{Abstract}}
 
 \begin{document}
-%
-%
-%
 \begin{titlepage}
     \centering
     \vspace*{0.22\textheight}
@@ -81,12 +80,28 @@ https://creativecommons.org/licenses/by-nc-sa/4.0}
 
     \vfill
     {\small \titleuppercase{\portfoliocopyright}\par}
-    {\small \titleuppercase{Licensed under}\href{\portfoliolicenseurl}%
+    {\small \titleuppercase{Licensed under}\ \href{\portfoliolicenseurl}%
     {\titleuppercase{\portfoliolicense}}.\par}
-    {\small \href{\portfoliorepository}{\titleuppercase{%
-    \portfoliorepository}}\par}
+    {\small \href{\portfoliourl}{\titleuppercase{%
+    \portfoliourl}}\par}
 \end{titlepage}
-%
-%
-%
+
+
+
+\begin{abstract}
+    \portfolioabstract
+\end{abstract}
+
+
+
+\tableofcontents
+
+
+
+\include{Subsections/Examples/Example1}
+\include{Subsections/Examples/Example2}
+\include{Subsections/Examples/Example3}
+\include{Subsections/Examples/Example4}
+\include{Subsections/Examples/Example5}
+\include{Subsections/Examples/Example6}
 \end{document}
