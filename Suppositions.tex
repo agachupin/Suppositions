@@ -3,7 +3,9 @@
 
 
 
+\usepackage[T1]{fontenc}
 \usepackage[margin=1in]{geometry}
+\usepackage{lmodern}
 \usepackage{microtype}
 \usepackage[nodisplayskipstretch]{setspace}
 \setstretch{1.15}
@@ -21,6 +23,7 @@
 \newcommand{\portfoliosubtitle}{Standard Proof Techniques in Discrete %
 Mathematics and Example Applications}
 \newcommand{\portfolioauthor}{Alejandro [Esteban] Gachupin}
+\newcommand{\portfolioinstitution}{Wake Forest University}
 \newcommand{\portfolioabstract}{This document examines standard proof %
 techniques found in discrete mathematics. It combines meticulous explanations %
 with example applications to accessibly define and demonstrate each approach.}
@@ -31,6 +34,8 @@ with example applications to accessibly define and demonstrate each approach.}
 https://creativecommons.org/licenses/by-nc-sa/4.0}
 \newcommand{\portfoliocopyright}{Copyright © \portfolioyear\ \portfolioauthor.}
 
+\newcommand{\portfoliorepository}{https://github.com/agachupin/suppositions}
+
 \hypersetup{
     pdftitle            = {\portfoliotitle: \portfoliosubtitle},
     pdfdisplaydoctitle  = {true},
@@ -40,6 +45,7 @@ https://creativecommons.org/licenses/by-nc-sa/4.0}
     pdfcopyright        = {\portfoliocopyright\ %
     Licensed under \portfoliolicense.},
     pdflicenseurl       = {\portfoliolicenseurl},
+    pdfurl              = {\portfoliorepository},
     bookmarksnumbered   = {true},
     bookmarksopen       = {true},
     pdfpagelayout       = {OneColumn},
@@ -47,6 +53,8 @@ https://creativecommons.org/licenses/by-nc-sa/4.0}
 }
 
 
+
+\newcommand{\titleuppercase}[1]{\textls[50]{\MakeUppercase{#1}}}
 
 \begin{document}
 %
@@ -56,21 +64,27 @@ https://creativecommons.org/licenses/by-nc-sa/4.0}
     \centering
     \vspace*{0.22\textheight}
 
-    {\Huge\bfseries \portfoliotitle\par}
-    \vspace{2ex}
-    \parbox{0.8\textwidth}{\centering\Large \portfoliosubtitle}\par
+    {\Huge\bfseries \titleuppercase{\portfoliotitle}\par}
+    \vspace{3ex}
+    \parbox{0.8\textwidth}{\centering\large %
+    \titleuppercase{\portfoliosubtitle}}\par
 
     \vspace{4ex}
     \rule{0.35\textwidth}{0.4pt}\par
     \vspace{4ex}
 
-    {\large\scshape \portfolioauthor\par}
-    \vspace{1ex}
-    {\today\par}
+    {\large \titleuppercase{\portfolioauthor}\par}
+    \vspace{0.5ex}
+    {\titleuppercase{\portfolioinstitution}\par}
+    \vspace{2ex}
+    {\titleuppercase{\today}\par}
 
     \vfill
-    {\small \portfoliocopyright\ Licensed under %
-    \href{\portfoliolicenseurl}{\portfoliolicense}.\par}
+    {\small \titleuppercase{\portfoliocopyright}\par}
+    {\small \titleuppercase{Licensed under}\href{\portfoliolicenseurl}%
+    {\titleuppercase{\portfoliolicense}}.\par}
+    {\small \href{\portfoliorepository}{\titleuppercase{%
+    \portfoliorepository}}\par}
 \end{titlepage}
 %
 %
