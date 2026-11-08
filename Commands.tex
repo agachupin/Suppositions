@@ -1,11 +1,15 @@
 \newcommand{\titleuppercase}[1]{\textls[50]{\MakeUppercase{#1}}}
 
+\setcounter{secnumdepth}{0}
 \titleformat{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}%
 {\titleuppercase}
 
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+
 \renewcommand{\proofname}{\upshape\bfseries Proof}
 \theoremstyle{definition}
-\newtheorem{proposition}{Proposition}[section]
+\newtheorem*{exercise}{Exercise}
 
 \renewcommand{\cftsecfont}{\normalfont}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
