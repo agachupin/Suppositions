@@ -20,19 +20,26 @@
 \newcommand{\portfoliotitle}{Suppositions}
 \newcommand{\portfoliosubtitle}{Standard Proof Techniques in Discrete %
 Mathematics and Example Applications}
-\newcommand{\portfolioauthor}{Alejandro Esteban Gachupin}
+\newcommand{\portfolioauthor}{Alejandro [Esteban] Gachupin}
+\newcommand{\portfolioabstract}{This document examines standard proof %
+techniques found in discrete mathematics. It combines meticulous explanations %
+with example applications to accessibly define and demonstrate each approach.}
+
+\newcommand{\portfolioyear}{2026}
+\newcommand{\portfoliolicense}{CC BY-NC-SA 4.0}
+\newcommand{\portfoliolicenseurl}{%
+https://creativecommons.org/licenses/by-nc-sa/4.0}
+\newcommand{\portfoliocopyright}{Copyright © \portfolioyear\ \portfolioauthor.}
 
 \hypersetup{
     pdftitle            = {\portfoliotitle: \portfoliosubtitle},
     pdfdisplaydoctitle  = {true},
     pdfauthor           = {\portfolioauthor},
-    pdfcopyright        = {Copyright © 2026 \portfolioauthor. Licensed under %
-    CC BY-NC-SA 4.0.},
-    pdflicenseurl       = {https://creativecommons.org/licenses/by-nc-sa/4.0/},
-    pdfsubject          = {This document examines standard proof techniques %
-    found in discrete mathematics. It combines meticulous explanations with %
-    example applications to accessibly define and demonstrate each approach.},
+    pdfsubject          = {\portfolioabstract},
     pdfkeywords         = {Discrete Mathematics, Proof Techniques},
+    pdfcopyright        = {\portfoliocopyright\ %
+    Licensed under \portfoliolicense.},
+    pdflicenseurl       = {\portfoliolicenseurl},
     bookmarksnumbered   = {true},
     bookmarksopen       = {true},
     pdfpagelayout       = {OneColumn},
@@ -42,5 +49,30 @@ Mathematics and Example Applications}
 
 
 \begin{document}
-Hello!
+%
+%
+%
+\begin{titlepage}
+    \centering
+    \vspace*{0.22\textheight}
+
+    {\Huge\bfseries \portfoliotitle\par}
+    \vspace{2ex}
+    \parbox{0.8\textwidth}{\centering\Large \portfoliosubtitle}\par
+
+    \vspace{4ex}
+    \rule{0.35\textwidth}{0.4pt}\par
+    \vspace{4ex}
+
+    {\large\scshape \portfolioauthor\par}
+    \vspace{1ex}
+    {\today\par}
+
+    \vfill
+    {\small \portfoliocopyright\ Licensed under %
+    \href{\portfoliolicenseurl}{\portfoliolicense}.\par}
+\end{titlepage}
+%
+%
+%
 \end{document}
