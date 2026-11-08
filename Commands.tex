@@ -1,10 +1,9 @@
 \newcommand{\titleuppercase}[1]{\textls[50]{\MakeUppercase{#1}}}
 
-\setcounter{secnumdepth}{0}
-\titleformat{\section}[block]{\large\bfseries\filcenter}{\thesection}{1em}%
-{\titleuppercase}
-\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection}{1em}%
-{\titleuppercase}
+\titleformat{\section}[block]{\large\bfseries\filcenter}{\mdseries\thesection}%
+{1em}{\titleuppercase}
+\titleformat{\subsection}[block]{\normalsize\bfseries}{\mdseries\thesubsection}%
+{1em}{\titleuppercase}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
