@@ -4,25 +4,74 @@
 
 
 \begin{exercise}{
-    For $(a_1, a_2, \dotsc, a_n), (b_1, b_2, \dotsc, b_n) \in \R^n$, the %
-    dot product is
-    \[
-        (a_1, a_2, \dotsc, a_n) \cdot (b_1, b_2, \dotsc, b_n) %
-        = a_1 b_1 + a_2 b_2 + \dotsb + a_n b_n.
-    \]
+    For 
+    $(a_1, a_2, a_3, \dotsc, a_n), (b_1, b_2, b_3, \dotsc, b_n) \in \R^n$, %
+    the dot product is %
+    $(a_1, a_2, a_3, \dotsc, a_n) \cdot (b_1, b_2, b_3 \dotsc, b_n) = %
+    a_1 b_1 + a_2 b_2 + a_3 b_3 + \dotsb + a_n b_n$.
+    
     For example, %
     $(5, 2, -3) \cdot (3, 7, 4) = 5 \cdot 3 + 2 \cdot 7 + (-3) \cdot 4 = 17$. %
-    Prove that
-    \[
-        (1, 2, 3, \dotsc, n) \cdot (1!, 2!, 3!, \dotsc, n!) = (n + 1)! - 1
-    \]
-    for all positive integers $n$.
+
+    Prove that $(1, 2, 3, \dotsc, n) \cdot (1!, 2!, 3!, \dotsc, n!) = %
+    (n + 1)! - 1$ for all positive integers $n$.
     }
 \end{exercise}
 
 
 
 \begin{proof}{
-    Hello!
+    This statement can be proven by %
+    \hyperref[subsections:techniques:universal:induction]
+    {mathematical induction}.
+
+    \begin{panel}[Base Case: Let $n = 1$.]{
+        Then
+        \begin{align*}{
+            (1, 2, 3, \dotsc, n) \cdot (1!, 2!, 3!, \dotsc, n!) &= (1) \cdot (1!)\\
+                                                                &= 1 \cdot 1\\
+                                                                &= 1,
+            }
+        \end{align*}
+        and
+        \begin{align*}{
+            (n + 1)! - 1 &= (1 + 1)! - 1\\
+                         &= (2)! - 1\\
+                         &= 2 - 1\\
+                         &= 1.
+            }
+        \end{align*}
+        Thus, $(1, 2, 3, \dotsc, n) \cdot (1!, 2!, 3!, \dotsc, n!) = %
+        (n + 1)! - 1$.
+        }
+    \end{panel}
+
+    \begin{panel}[Inductive Hypothesis.]{
+        $\exists k \in \Z$ with $k \geq 1$ such that %
+        $(1, 2, 3, \dotsc, k) \cdot (1!, 2!, 3!, \dotsc, k!) = (k + 1)! - 1$.
+        }
+    \end{panel}
+
+    \begin{panel}[Induction: Consider $k + 1$.]{
+        We want to demonstrate that %
+        $[1, 2, 3, \dotsc, k, (k + 1)] \cdot %
+        [1!, 2!, 3!, \dotsc, k!, (k + 1)!] = [(k + 1) + 1]! - 1$. %
+        Per the inductive hpothesis and sequence definition,
+        \begin{align*}{
+             [1, 2, 3, \dotsc, k, (k + 1)] \cdot %
+             [1!, 2!, 3!, \dotsc, k!, (k + 1)!] &= [(k + 1)! - 1] %
+             + (k + 1)(k + 1)!\\
+                                                &= (k + 1)! + (k + 1)(k + 1)! %
+                                                - 1\\
+                                                &= (k + 1)! \cdot %
+                                                [1 + (k + 1)] - 1\\
+                                                &= (k + 1)! \cdot (k + 2) - 1\\
+                                                &= (k + 2)! - 1\\
+                                                &= [(k + 1) + 1]! - 1.
+            }
+        \end{align*}
+        }
+    \end{panel}
+    Therefore, the statement holds by the principle of mathematical induction.
     }
 \end{proof}
