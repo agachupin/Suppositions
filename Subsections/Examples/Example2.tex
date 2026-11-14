@@ -4,9 +4,9 @@
 
 
 \begin{exercise}{
-    Prove that if $x < -4$ and $y > 2$, then the distance from $(x, y)$ to %
-    $(1, -2)$ is at least $6$.
-    }
+    Prove that if $x < -4$ and $y > 2$, %
+    then the distance from $(x, y)$ to $(1, -2)$ is at least $6$.
+}
 \end{exercise}
 
 
@@ -15,48 +15,54 @@
     This statement can be proven %
     \hyperref[subsections:techniques:universal:direct]{directly}.
 
-    Let $x, y \in \R$ such that $x < -4$ and $y > 2$. Let $d$ denote the %
-    distance from $(x, y)$ to $(1, -2)$. By the Euclidean distance formula, %
-    $d = \sqrt{(1 - x)^2 + (-2 - y)^2}$.
+    \begin{panel}[Setup.]{
+        Let $x, y \in \R$ such that $x < -4$ and $y > 2$. %
+        Let $d$ denote the distance from $(x, y)$ to $(1, -2)$. %
+        By the Euclidean distance formula, %
+        \[
+            d = \sqrt{(1 - x)^2 + (-2 - y)^2}.
+        \]
+    }
+    \end{panel}
 
     \begin{panel}[Bound 1: We know $x < -4$.]{
-        Then
+        Then %
         \begin{align*}{
-            -x &> 4\\
-            -x + 1 &> 4 + 1\\
-            1 - x &> 5\\
+                   -x &> 4\\
+               -x + 1 &> 4 + 1\\
+                1 - x &> 5\\
             (1 - x)^2 &> 5^2\\
             (1 - x)^2 &> 25.
-            }
-        \end{align*}
         }
+        \end{align*}
+    }
     \end{panel}
 
     \begin{panel}[Bound 2: We know $y > 2$.]{
-        Then
+        Then %
         \begin{align*}{
-            -y &< -2\\
-            -y - 2 &< -2 - 2\\
-            -2 - y &< -4\\
+                    -y &< -2\\
+                -y - 2 &< -2 - 2\\
+                -2 - y &< -4\\
             (-2 - y)^2 &> (-4)^2\\
             (-2 - y)^2 &> 16.
-            }
-        \end{align*}
         }
+        \end{align*}
+    }
     \end{panel}
 
     \begin{panel}[Combining the bounds.]{
-        Then
+        By the first and second bounds, %
         \begin{align*}{
             d &= \sqrt{(1 - x)^2 + (-2 - y)^2}\\
               &> \sqrt{25 + 16}\\
               &= \sqrt{41}\\
               &\geq 6.
-            }
-        \end{align*}
         }
-    \end{panel}
-    
-    Therefore, the statement holds.
+        \end{align*}
     }
+    \end{panel}
+
+    Therefore, the distance from $(x, y)$ to $(1, -2)$ is at least $6$.
+}
 \end{proof}

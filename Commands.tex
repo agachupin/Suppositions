@@ -1,9 +1,16 @@
 \newcommand{\titleuppercase}[1]{\textls[50]{\MakeUppercase{#1}}}
 
-\titleformat{\section}[block]{\large\bfseries\filcenter}{\mdseries\thesection}%
-{1em}{\titleuppercase}
-\titleformat{\subsection}[block]{\normalsize\bfseries}{\mdseries\thesubsection}%
-{1em}{\titleuppercase}
+\titleformat{\section}[block]%
+    {\large\bfseries\filcenter}%
+    {\mdseries\thesection}%
+    {1em}%
+    {\titleuppercase}
+
+\titleformat{\subsection}[block]%
+    {\normalsize\bfseries}%
+    {\mdseries\thesubsection}%
+    {1em}%
+    {\titleuppercase}
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -19,7 +26,14 @@
     sharp corners,
     left = 16pt, right = 16pt, top = 12pt, bottom = 12pt,
     before skip = 14pt, after skip = 14pt,
-    before upper = {\IfValueT{#1}{{\small\bfseries\color{black!70}%
-        \titleuppercase{#1}\par}\nointerlineskip\vspace{7pt}%
-        {\color{black!20}\hrule height 0.4pt}\nointerlineskip\vspace{7pt}}}
+    before upper = {%
+        \IfValueT{#1}{%
+            {\small\bfseries\color{black!70}\titleuppercase{#1}\par}%
+            \nointerlineskip
+            \vspace{7pt}%
+            {\color{black!20}\hrule height 0.4pt}%
+            \nointerlineskip
+            \vspace{7pt}%
+        }%
+    }
 }
