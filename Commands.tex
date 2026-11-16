@@ -6,6 +6,19 @@
     {1em}%
     {\titleuppercase}
 
+\let\sectionstyle\section
+\RenewDocumentCommand{\section}{s o m}{%
+    \IfBooleanTF{#1}{%
+        \sectionstyle*{#3}%
+    }{%
+        \clearpage
+        \thispagestyle{empty}%
+        \vspace*{\fill}%
+        \IfNoValueTF{#2}{\sectionstyle{#3}}{\sectionstyle[#2]{#3}}%
+        \vspace*{\fill}%
+    }%
+}
+
 \titleformat{\subsection}[block]%
     {\normalsize\bfseries}%
     {\mdseries\thesubsection}%
