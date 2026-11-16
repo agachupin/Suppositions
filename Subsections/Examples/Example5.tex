@@ -15,6 +15,55 @@
 
 
 \begin{proof}{
-    Hello!
+    This statement can be proven by proving each direction of the %
+    biconditional.
+
+    \begin{panel}[Part 1: Proving $f$ has a left inverse.]{
+        Let $f$ be a function defined by $f \colon A \to B$ such that %
+        $f$ is injective. %
+        Let $x \in A$ (since $A$ is nonempty). %
+        Let $g$ be a function defined by $g \colon B \to A$ such that %
+        for all $y \in B$, %
+        \[
+            g(y) =
+            \begin{cases}
+                a & \text{if } y = f(a) \text{ for some } a \in A, \\
+                x & \text{if } y \neq f(a) \text{ for any } a \in A.
+            \end{cases}
+        \]
+        Because $f$ is injective, the element $a$ in the first case is %
+        unique, meaning that $g$ is a well-defined function.
+
+        To prove $g$ is a left inverse of $f$, let $k \in A$. %
+        By the definition of $g$, %
+        \[
+            g(f(k)) = k.
+        \]
+        Because $g(f(k)) = k$ holds for all $k \in A$, %
+        $g$ is a valid left inverse of $f$.
+    }
+    \end{panel}
+
+    \begin{panel}[Part 2: Proving $f$ is injective.]{
+        Let $g$ be a function defined by $g \colon B \to A$ such that %
+        $g$ is the left inverse to a function $f$, %
+        defined by $f \colon A \to B$. %
+        Then, for all $x \in A$, %
+        \[
+            (g \circ f)(x) = g(f(x)) = x.
+        \]
+        Let $x_1, x_2 \in A$ such that $f(x_1) = f(x_2)$. %
+        Then %
+        \[
+            g(f(x_1)) = g(f(x_2)).
+        \]
+        Thus, $x_1 = x_2$. %
+        Therefore, $f$ is injective when it has a left inverse.
+    }
+    \end{panel}
+
+    Thus, there is a left inverse when $f$ is injective, %
+    and $f$ is an injective function when there is a left inverse. %
+    Therefore, the statement holds.
 }
 \end{proof}

@@ -13,6 +13,55 @@
 
 
 \begin{proof}{
-    Hello!
+    This statement can be proven %
+    \hyperref[subsections:techniques:universal:direct]{directly}.
+
+    \begin{panel}[Setup.]{
+        Let $A, B \subseteq \R$ such that $A$ and $B$ are open sets. %
+        Let $b \in A \cap B$. %
+        Then $b \in A$ and $b \in B$. %
+        We want to demonstrate that $\exists \epsilon > 0$ such that %
+        \[
+            (b - \epsilon, b + \epsilon) \subseteq A \cap B.
+        \]
+    }
+    \end{panel}
+
+    \begin{panel}[Applying the definitions.]{
+        Since $A$ is open and $b \in A$, %
+        $\exists \epsilon_1 > 0$ such that %
+        \[
+            (b - \epsilon_1, b + \epsilon_1) \subseteq A.
+        \]
+        Similarly, since $B$ is open and $b \in B$, %
+        $\exists \epsilon_2 > 0$ such that %
+        \[
+            (b - \epsilon_2, b + \epsilon_2) \subseteq B.
+        \]
+    }
+    \end{panel}
+
+    \begin{panel}[Defining the minimum.]{
+        Let $\epsilon = \min(\epsilon_1, \epsilon_2)$. %
+        Then $\epsilon > 0$ because $\epsilon_1 > 0$ and $\epsilon_2 > 0$. %
+        Since $\epsilon \leq \epsilon_1$, %
+        \[
+            (b - \epsilon, b + \epsilon) \subseteq
+            (b - \epsilon_1, b + \epsilon_1) \subseteq A.
+        \]
+        Similarly, since $\epsilon \leq \epsilon_2$, %
+        \[
+            (b - \epsilon, b + \epsilon) \subseteq
+            (b - \epsilon_2, b + \epsilon_2) \subseteq B.
+        \]
+        Thus, %
+        \[
+            (b - \epsilon, b + \epsilon) \subseteq A \cap B.
+        \]
+    }
+    \end{panel}
+
+    Thus, $A \cap B$ is open. %
+    Therefore, the statement holds.
 }
 \end{proof}

@@ -13,6 +13,81 @@
 
 
 \begin{proof}{
-    Hello!
+    This statement can be proven by %
+    \hyperref[subsections:techniques:universal:cases]{division into cases}.
+
+    \begin{panel}[Setup.]{
+        Let $r \in \R$ such that $r > 0$ is the radius of a circle %
+        centered at the origin, $(0, 0)$. %
+        Let $(m, n)$ be a lattice point inside the circle. %
+        Let $d$ denote the distance from $(0, 0)$ to $(m, n)$. %
+        By the Euclidean distance formula, %
+        \begin{align*}{
+            d &= \sqrt{(m - 0)^2 + (n - 0)^2}\\
+              &= \sqrt{m^2 + n^2}\\
+              &< r.
+        }
+        \end{align*}
+        Thus, $m^2 + n^2 < r^2$. %
+        Since $m$ and $n$ are integers, each is either $0$ or nonzero. %
+        Therefore, we consider three cases: both are $0$, %
+        exactly one is $0$, or neither is $0$.
+    }
+    \end{panel}
+
+    \begin{panel}[Case 1: Suppose that $m = 0$ and $n = 0$.]{
+        Observe that $0^2 + 0^2 = 0 < r^2$. %
+        Therefore, the origin $(0, 0)$ is inside the circle, %
+        giving exactly $1$ lattice point.
+    }
+    \end{panel}
+
+    \begin{panel}[Case 2: Suppose that exactly one of $m$ and $n$ is $0$.]{
+        Let $t \in \Z$ such that $t > 0$ and $t$ is the absolute value of %
+        the nonzero coordinate of $(m, n)$. %
+        Then $(m, n)$ is one of the points %
+        \[
+            (t, 0), \quad (-t, 0), \quad (0, t), \quad (0, -t).
+        \]
+        These are four distinct lattice points, since $t \neq 0$. %
+        Since the squares of the coordinates of each point sum to %
+        $t^2 = m^2 + n^2 < r^2$, all four points are inside the circle. %
+        Since $t$ is determined by the point, distinct values of $t$ give %
+        disjoint sets. %
+        Therefore, the lattice points in this case are partitioned into %
+        sets of $4$.
+    }
+    \end{panel}
+
+    \begin{panel}[Case 3: Suppose that $m \neq 0$ and $n \neq 0$.]{
+        Let $s = |m|$ and $t = |n|$. %
+        Then $s, t \in \Z$ with $s > 0$ and $t > 0$, %
+        and $(m, n)$ is one of the points %
+        \[
+            (s, t), \quad (-s, t), \quad (s, -t), \quad (-s, -t).
+        \]
+        These are four distinct lattice points, since $s \neq 0$ and %
+        $t \neq 0$. %
+        Since $(\pm s)^2 + (\pm t)^2 = m^2 + n^2 < r^2$, %
+        all four points are inside the circle. %
+        Since the pair $(s, t)$ is determined by the point, distinct pairs %
+        give disjoint sets. %
+        Therefore, the lattice points in this case are partitioned into %
+        sets of $4$.
+    }
+    \end{panel}
+
+    \begin{panel}[Combining the cases.]{
+        Since $m^2 + n^2 < r^2$ implies $|m| < r$ and $|n| < r$, %
+        only finitely many lattice points are inside the circle. %
+        Since the lattice points in Cases 2 and 3 are partitioned into sets %
+        of $4$, there exists $k \in \Z$ with $k \geq 0$ such that they %
+        total $4k$ points. %
+        Adding the $1$ point from Case 1, %
+        the circle contains $4k + 1$ lattice points.
+    }
+    \end{panel}
+
+    Therefore, the statement holds.
 }
 \end{proof}
