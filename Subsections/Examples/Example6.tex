@@ -4,8 +4,9 @@
 
 
 \begin{exercise}{
-    A set $S \subseteq \R$ is open if for each $b \in S$, there exists %
-    $\epsilon > 0$ such that $(b - \epsilon, b + \epsilon) \subseteq S$. %
+    A set $S \subseteq \R$ is open if $\forall s \in S$, %
+    $\exists \epsilon \in \R$ with $\epsilon > 0$ such that %
+    $(s - \epsilon, s + \epsilon) \subseteq S$. %
     Prove that the intersection of two open sets is open.
 }
 \end{exercise}
@@ -17,51 +18,53 @@
     \hyperref[subsections:techniques:universal:direct]{directly}.
 
     \begin{panel}[Setup.]{
-        Let $A, B \subseteq \R$ such that $A$ and $B$ are open sets. %
-        Let $b \in A \cap B$. %
-        Then $b \in A$ and $b \in B$. %
-        We want to demonstrate that $\exists \epsilon > 0$ such that %
+        Let $S_1, S_2 \subseteq \R$ be open sets. %
+        Let $s \in S_1 \cap S_2$. %
+        Then $s \in S_1$ and $s \in S_2$. %
+        We want to demonstrate that %
+        $\exists \epsilon \in \R$ with $\epsilon > 0$ such that %
         \[
-            (b - \epsilon, b + \epsilon) \subseteq A \cap B.
+            (s - \epsilon, s + \epsilon) \subseteq S_1 \cap S_2.
         \]
     }
     \end{panel}
 
     \begin{panel}[Applying the definitions.]{
-        Since $A$ is open and $b \in A$, %
-        $\exists \epsilon_1 > 0$ such that %
+        Since $S_1$ is open and $s \in S_1$, %
+        $\exists \epsilon_1 \in \R$ with $\epsilon_1 > 0$ such that %
         \[
-            (b - \epsilon_1, b + \epsilon_1) \subseteq A.
+            (s - \epsilon_1, s + \epsilon_1) \subseteq S_1.
         \]
-        Similarly, since $B$ is open and $b \in B$, %
-        $\exists \epsilon_2 > 0$ such that %
+        Similarly, since $S_2$ is open and $s \in S_2$, %
+        $\exists \epsilon_2 \in \R$ with $\epsilon_2 > 0$ such that %
         \[
-            (b - \epsilon_2, b + \epsilon_2) \subseteq B.
+            (s - \epsilon_2, s + \epsilon_2) \subseteq S_2.
         \]
     }
     \end{panel}
 
     \begin{panel}[Defining the minimum.]{
         Let $\epsilon = \min(\epsilon_1, \epsilon_2)$. %
-        Then $\epsilon > 0$ because $\epsilon_1 > 0$ and $\epsilon_2 > 0$. %
+        Then $\epsilon \in \R$ and $\epsilon > 0$ because %
+        $\epsilon_1, \epsilon_2 \in \R$ and $\epsilon_1, \epsilon_2 > 0$. %
         Since $\epsilon \leq \epsilon_1$, %
         \[
-            (b - \epsilon, b + \epsilon) \subseteq
-            (b - \epsilon_1, b + \epsilon_1) \subseteq A.
+            (s - \epsilon, s + \epsilon) \subseteq
+            (s - \epsilon_1, s + \epsilon_1) \subseteq S_1.
         \]
         Similarly, since $\epsilon \leq \epsilon_2$, %
         \[
-            (b - \epsilon, b + \epsilon) \subseteq
-            (b - \epsilon_2, b + \epsilon_2) \subseteq B.
+            (s - \epsilon, s + \epsilon) \subseteq
+            (s - \epsilon_2, s + \epsilon_2) \subseteq S_2.
         \]
         Thus, %
         \[
-            (b - \epsilon, b + \epsilon) \subseteq A \cap B.
+            (s - \epsilon, s + \epsilon) \subseteq S_1 \cap S_2.
         \]
     }
     \end{panel}
 
-    Thus, $A \cap B$ is open. %
+    Thus, $S_1 \cap S_2$ is open. %
     Therefore, the statement holds.
 }
 \end{proof}
