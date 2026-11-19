@@ -50,3 +50,65 @@
         }%
     }
 }
+
+
+
+\newcommand{\panelheading}[3]{%
+    {\small\bfseries\color{#1}\titleuppercase{#3}\par}%
+    \nointerlineskip
+    \vspace{7pt}%
+    {\color{#2}\hrule height 0.4pt}%
+    \nointerlineskip
+    \vspace{7pt}%
+}
+
+\newlength{\annotationwidth}
+\setlength{\annotationwidth}{0.36\textwidth}
+
+\tcbset{
+    annotated/.style = {
+        enhanced, unbreakable,
+        frame hidden, boxrule = 0pt, sharp corners,
+        sidebyside, sidebyside align = top, lower separated = false,
+        sidebyside gap = 32pt, righthand width = \annotationwidth,
+        colback = black!3,
+        left = 16pt, right = 16pt, top = 12pt, bottom = 12pt,
+        before skip = 14pt, after skip = 14pt,
+        underlay = {%
+            \begin{tcbclipinterior}
+                \fill[blue!8]
+                    ([xshift = -\annotationwidth - 32pt]interior.north east)
+                    rectangle (interior.south east);
+            \end{tcbclipinterior}%
+        },
+        before lower = {%
+            \panelheading{blue!50!black}{blue!25}{Annotation.}%
+        }
+    }
+}
+
+\NewDocumentEnvironment{annotatedpanel}{o m m}{%
+    \begin{tcolorbox}[
+        annotated,
+        borderline west = {1pt}{0pt}{black!75},
+        before upper = {%
+            \IfValueT{#1}{\panelheading{black!70}{black!20}{#1}}%
+        }
+    ]
+        #2
+        \tcblower
+        \small #3
+    \end{tcolorbox}%
+}{}
+
+\NewDocumentEnvironment{annotatedtext}{m m}{%
+    \begin{tcolorbox}[
+        annotated,
+        colback = white, left = 0pt,
+        before upper = {\panelheading{white}{white}{.}}
+    ]
+        #1
+        \tcblower
+        \small #2
+    \end{tcolorbox}%
+}{}
