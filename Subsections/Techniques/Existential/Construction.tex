@@ -1,2 +1,70 @@
 \subsection{Proof by Construction}
 \label{subsections:techniques:existential:construction}
+
+
+
+\paragraph{Description.}
+A proof by construction proves a mathematical statement by showing that %
+something exists via an example. %
+Precisely, it proves an existential statement, %
+$\exists s \in S$ such that $P(s)$, by defining a particular element %
+$s_0 \in S$ and showing that $P(s_0)$ is true. %
+Generally, a proof by construction mirrors the following format:
+\begin{enumerate}
+    \item \textbf{Setup.} %
+        Define a particular element $s_0$ and show that $s_0 \in S$.
+    \item \textbf{Verification.} %
+        Show that $P(s_0)$ is true.
+    \item \textbf{Conclusion.} %
+        Conclude the proof, optionally by summarizing what has been found.
+\end{enumerate}
+
+\paragraph{Advice.}
+\begin{itemize}
+    \item A proof by construction can only be applied to existential %
+        statements. It is not sufficient for universal statements.
+    \item One example is sufficient, even though multiple examples may exist.
+\end{itemize}
+
+\paragraph{Example.}
+
+
+
+\begin{exercise}{
+    Prove that $\exists z \in \Z$ such that $z^2 = 4$.
+}
+\end{exercise}
+
+
+
+\begin{proof}{
+    This statement can be proven by %
+    \hyperref[subsections:techniques:existential:construction]{construction}.
+
+    \begin{annotatedpanel}[Setup.]{
+        Let $z \in \Z$ with $z = 2$.
+    }{
+        \textbf{Step 1.} Define $s_0$ and show that $s_0 \in S$. %
+        Here, $s_0 = 2$ and $S = \Z$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Verification.]{
+        Then $z^2 = 2^2 = 4$.
+    }{
+        \textbf{Step 2.} Show that $P(s_0)$ is true. %
+        Here, $P(z)$ is the equation $z^2 = 4$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Conclusion.]{
+        Thus, $\exists z \in \Z$ such that $z^2 = 4$. %
+        Therefore, the statement holds by construction. \qedhere
+    }{
+        \textbf{Step 3.} Conclude the proof. %
+        Here, the summary states what has been found: %
+        $s_0 = 2$ satisfies $P$.
+    }
+    \end{annotatedpanel}
+}
+\end{proof}
