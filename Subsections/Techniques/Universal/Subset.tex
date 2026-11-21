@@ -1,2 +1,73 @@
 \subsection{Proof of Subset Containment}
 \label{subsections:techniques:universal:subset}
+
+
+
+\paragraph{Description.}
+A proof by subset containment proves that one set is contained in another %
+by showing that every element of the first is an element of the second. %
+Precisely, it proves that $A \subseteq B$, meaning $\forall x \in A$, %
+$x \in B$, by letting $x \in A$ and showing that $x \in B$. %
+Generally, a proof by subset containment mirrors the following format:
+\begin{enumerate}{
+    \item \textbf{Setup.} %
+        Let $x \in A$.
+    \item \textbf{Verification.} %
+        Show that $x \in B$.
+    \item \textbf{Conclusion.} %
+        Conclude the proof, optionally by summarizing what has been found.
+}
+\end{enumerate}
+
+
+
+\paragraph{Advice.}
+\begin{itemize}{
+    \item Use this proof for a statement of the form $A \subseteq B$. %
+        To prove $A = B$, prove both $A \subseteq B$ and $B \subseteq A$.
+    \item Rewrite $x \in A$ using the definition of $A$, and finish by %
+        satisfying the definition of $B$.
+}
+\end{itemize}
+
+
+
+\paragraph{Example.}
+\begin{exercise}{
+    Let $A = \{4k \mid k \in \Z\}$ and $B = \{2m \mid m \in \Z\}$. %
+    Prove that $A \subseteq B$.
+}
+\end{exercise}
+\begin{proof}{
+    This statement can be proven by subset containment.
+
+    \begin{annotatedpanel}[Setup.]{
+        Let $z \in A$. %
+        Then $z = 4k$ with $k \in \Z$.
+    }{
+        \textbf{Step 1.} Let $x \in A$. %
+        Here, $x = z$, and $z \in A$ means that $z = 4k$ with $k \in \Z$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Verification.]{
+        Let $m \in \Z$ such that $m = 2k$. %
+        Then $z = 4k = 2(2k) = 2m$. %
+        Thus, $z \in B$.
+    }{
+        \textbf{Step 2.} Show that $x \in B$. %
+        Here, $z \in B$ means that $z = 2m$ with $m \in \Z$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Conclusion.]{
+        Thus, $\forall z \in A$, $z \in B$, so $A \subseteq B$. %
+        Therefore, the statement holds by subset containment. \qedhere
+    }{
+        \textbf{Step 3.} Conclude the proof. %
+        Here, the summary states what has been found: %
+        every element of $A$ is an element of $B$.
+    }
+    \end{annotatedpanel}
+}
+\end{proof}
