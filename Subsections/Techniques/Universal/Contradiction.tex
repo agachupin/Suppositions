@@ -1,2 +1,81 @@
 \subsection{Proof by Contradiction}
 \label{subsections:techniques:universal:contradiction}
+
+
+
+\paragraph{Description.}
+A proof by contradiction proves a mathematical statement by showing that %
+its negation cannot be true. %
+Precisely, it proves a statement $A$ by assuming $\neg A$ and deriving a %
+contradiction, meaning statements $C$ and $\neg C$ that are both true. %
+This works because a statement is either true or false: %
+if $\neg A$ is false, then $A$ is true. %
+Generally, a proof by contradiction mirrors the following format:
+\begin{enumerate}{
+    \item \textbf{Setup.} %
+        Assume that $\neg A$ is true.
+    \item \textbf{Verification.} %
+        Derive a contradiction by showing that $C$ and $\neg C$ are true.
+    \item \textbf{Conclusion.} %
+        Conclude that $\neg A$ is false and therefore that $A$ is true, %
+        optionally by summarizing what has been found.
+}
+\end{enumerate}
+
+
+
+\paragraph{Advice.}
+\begin{itemize}{
+    \item Use this proof when assuming $\neg A$ gives something concrete %
+        to work with, such as when $A$ claims that something does not exist.
+    \item State the assumption $\neg A$ explicitly at the start of the %
+        proof, for example with ``Suppose, for contradiction, that $\dots$'' %
+        as the purpose of the proof can otherwise be unclear.
+}
+\end{itemize}
+
+
+
+\paragraph{Example.}
+\begin{exercise}{
+    Prove that $\neg\exists z \in \Z$ such that $2z = 1$.
+}
+\end{exercise}
+\begin{proof}{
+    This statement can be proven by contradiction.
+
+    \begin{annotatedpanel}[Setup.]{
+        Suppose, for contradiction, that $\exists z \in \Z$ such that %
+        $2z = 1$.
+    }{
+        \textbf{Step 1.} Assume that $\neg A$ is true. %
+        Here, $A$ is the statement $\neg\exists z \in \Z$ such that %
+        $2z = 1$, so $\neg A$ is the statement $\exists z \in \Z$ such that %
+        $2z = 1$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Verification.]{
+        Then $z = \frac{1}{2} \notin \Z$. %
+        This contradicts $z \in \Z$.
+    }{
+        \textbf{Step 2.} Derive a contradiction by showing that $C$ and %
+        $\neg C$ are true. %
+        Here, $C$ is the statement $z \in \Z$ and $\neg C$ is the %
+        statement $z = \frac{1}{2} \notin \Z$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Conclusion.]{
+        Thus, the assumption that $\exists z \in \Z$ such that $2z = 1$ %
+        is false, so $\neg\exists z \in \Z$ such that $2z = 1$. %
+        Therefore, the statement holds by contradiction. \qedhere
+    }{
+        \textbf{Step 3.} Conclude that $\neg A$ is false and therefore that %
+        $A$ is true. %
+        Here, the summary states what has been found: %
+        the assumption is false.
+    }
+    \end{annotatedpanel}
+}
+\end{proof}
