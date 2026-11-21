@@ -1,2 +1,75 @@
 \subsection{Proof of Injectivity}
 \label{subsections:techniques:universal:injective}
+
+
+
+\paragraph{Description.}
+A proof of injectivity proves that a function is one-to-one, %
+meaning that no two different inputs have the same output. %
+Precisely, it proves that a function $f : X \to Y$ satisfies %
+$\forall x_1, x_2 \in X$, if $f(x_1) = f(x_2)$, then $x_1 = x_2$. %
+Generally, a proof of injectivity mirrors the following format:
+\begin{enumerate}{
+    \item \textbf{Setup.} %
+        Let $x_1, x_2 \in X$ such that $f(x_1) = f(x_2)$.
+    \item \textbf{Verification.} %
+        Show that $x_1 = x_2$.
+    \item \textbf{Conclusion.} %
+        Conclude the proof, optionally by summarizing what has been found.
+}
+\end{enumerate}
+
+
+
+\paragraph{Advice.}
+\begin{itemize}{
+    \item Use this proof for a statement that a function is one-to-one, %
+        also called injective.
+    \item This proof is largely algebra and simplification: %
+        simplify $f(x_1) = f(x_2)$ until $x_1 = x_2$ is reached.
+}
+\end{itemize}
+
+
+
+\paragraph{Example.}
+\begin{exercise}{
+    Let $f : \Z \to \Z$ be defined by $f(z) = 2z + 1$. %
+    Prove that $f$ is one-to-one.
+}
+\end{exercise}
+\begin{proof}{
+    This statement can be proven by showing that $f$ is one-to-one.
+
+    \begin{annotatedpanel}[Setup.]{
+        Let $z_1, z_2 \in \Z$ such that $f(z_1) = f(z_2)$.
+    }{
+        \textbf{Step 1.} Let $x_1, x_2 \in X$ such that %
+        $f(x_1) = f(x_2)$. %
+        Here, $X = \Z$, $x_1 = z_1$, and $x_2 = z_2$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Verification.]{
+        Then $2z_1 + 1 = 2z_2 + 1$. %
+        Thus, $2z_1 = 2z_2$, so $z_1 = z_2$.
+    }{
+        \textbf{Step 2.} Show that $x_1 = x_2$. %
+        Here, subtracting $1$ and dividing by $2$ gives %
+        $z_1 = z_2$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Conclusion.]{
+        Thus, $\forall z_1, z_2 \in \Z$, if $f(z_1) = f(z_2)$, %
+        then $z_1 = z_2$. %
+        Therefore, the statement holds by the definition of one-to-one. %
+        \qedhere
+    }{
+        \textbf{Step 3.} Conclude the proof. %
+        Here, the summary states what has been found: %
+        equal outputs have equal inputs.
+    }
+    \end{annotatedpanel}
+}
+\end{proof}
