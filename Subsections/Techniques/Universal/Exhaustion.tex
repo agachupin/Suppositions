@@ -1,2 +1,82 @@
 \subsection{Proof by Exhaustion}
 \label{subsections:techniques:universal:exhaustion}
+
+
+
+\paragraph{Description.}
+A proof by exhaustion proves a mathematical statement by checking every %
+possible case. %
+Precisely, it proves a universal statement, %
+$\forall s \in S,\ P(s)$, where $S$ is finite, by listing every element %
+of $S$ and showing that $P(s)$ is true for each one. %
+It is effectively a %
+\hyperref[subsections:techniques:universal:cases]{%
+    proof by division into cases}, %
+but with specific elements instead of broad definitions for elements. %
+Generally, a proof by exhaustion mirrors the following format:
+\begin{enumerate}{
+    \item \textbf{Setup.} %
+        Define $S = \{s_1, \dots, s_n\}$ and let $s \in S$.
+    \item \textbf{Verification.} %
+        For each $s_i$, suppose $s = s_i$ and show that $P(s_i)$ is true.
+    \item \textbf{Conclusion.} %
+        Conclude the proof, optionally by summarizing what has been found.
+}
+\end{enumerate}
+
+
+
+\paragraph{Advice.}
+\begin{itemize}{
+    \item Use this proof only for a universal statement, %
+        $\forall s \in S,\ P(s)$, when $S$ is finite and small enough to %
+        check element by element. %
+        This proof cannot be used when $S$ is infinite.
+    \item Show $P(s_i)$ for every element of $S$ as any unaccounted for %
+        element leaves the statement unproven.
+}
+\end{itemize}
+
+
+
+\paragraph{Example.}
+\begin{exercise}{
+    Prove that $\forall k \in \{1, 2\},\ k^2 < 5$.
+}
+\end{exercise}
+\begin{proof}{
+    This statement can be proven by exhaustion.
+
+    \begin{annotatedpanel}[Setup.]{
+        Let $K = \{1, 2\}$. %
+        Let $k \in K$.
+    }{
+        \textbf{Step 1.} Define $S$ and let $s \in S$. %
+        Here, $S = K = \{1, 2\}$, so $s_1 = 1$ and $s_2 = 2$, %
+        and $s = k$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Verification.]{
+        Suppose $k = 1$. %
+        Then $k^2 = 1^2 = 1 < 5$. \\
+        Suppose $k = 2$. %
+        Then $k^2 = 2^2 = 4 < 5$.
+    }{
+        \textbf{Step 2.} For each $s_i$, suppose $s = s_i$ and show that %
+        $P(s_i)$ is true. %
+        Here, $P(k)$ is the inequality $k^2 < 5$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Conclusion.]{
+        Thus, $\forall k \in K,\ k^2 < 5$. %
+        Therefore, the statement holds by exhaustion. \qedhere
+    }{
+        \textbf{Step 3.} Conclude the proof. %
+        Here, the summary states what has been found: %
+        $P(k)$ holds for both elements.
+    }
+    \end{annotatedpanel}
+}
+\end{proof}
