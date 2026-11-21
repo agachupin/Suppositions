@@ -1,2 +1,109 @@
 \subsection{Proof by Division into Cases}
 \label{subsections:techniques:universal:cases}
+
+
+
+\paragraph{Description.}
+A proof by division into cases proves a mathematical statement by splitting %
+it into smaller statements and proving each one. %
+Precisely, it proves a universal statement, $\forall s \in S,\ P(s)$, %
+by dividing $S$ into subsets $S_1, \dots, S_n$ such that %
+$S = S_1 \cup \dots \cup S_n$ and showing that $P(s)$ is true for each %
+$s \in S_i$. %
+Generally, a proof by division into cases mirrors the following format:
+\begin{enumerate}{
+    \item \textbf{Setup.} %
+        Let $s \in S$ be arbitrary and divide $S$ into %
+        $S_1, \dots, S_n$ such that $S = S_1 \cup \dots \cup S_n$.
+    \item \textbf{Verification.} %
+        For each $S_i$, suppose $s \in S_i$ and show that $P(s)$ is true.
+    \item \textbf{Conclusion.} %
+        Conclude the proof, optionally by summarizing what has been found.
+}
+\end{enumerate}
+
+
+
+\paragraph{Advice.}
+\begin{itemize}{
+    \item Use this proof when no single argument works for every $s \in S$ %
+        but one works within each $S_i$.
+    \item Cover every element of $S$, as any $s$ in no case leaves the %
+        statement unproven.
+    \item To find cases, identify a property that divides $S$ into %
+        subsets, such as parity or sign.
+}
+\end{itemize}
+
+
+
+\paragraph{Example.}
+\begin{exercise}{
+    Prove that $\forall z \in \Z,\ \exists m \in \Z$ such that %
+    $z^2 + z = 2m$.
+}
+\end{exercise}
+\begin{proof}{
+    This statement can be proven by division into cases.
+
+    \begin{annotatedpanel}[Setup.]{
+        Let $z \in \Z$. %
+        Then $z$ is either even or odd.
+    }{
+        \textbf{Step 1.} Let $s \in S$ be arbitrary and divide $S$ into %
+        cases. %
+        Here, $S = \Z$, $s = z$, $S_1$ is the even integers, %
+        and $S_2$ is the odd integers.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Case 1.]{
+        Suppose $z$ is even. %
+        Then $z = 2k$ with $k \in \Z$. %
+        Thus, %
+        \begin{align*}{
+            z^2 + z &= (2k)^2 + 2k\\
+                    &= 4k^2 + 2k\\
+                    &= 2(2k^2 + k).
+        }
+        \end{align*}
+        Let $m \in \Z$ such that $m = 2k^2 + k$. %
+        Then $z^2 + z = 2(2k^2 + k) = 2m$.
+    }{
+        \textbf{Step 2.} Suppose $s \in S_1$ and show that $P(s)$ is true. %
+        Here, $P(z)$ is the statement $\exists m \in \Z$ such that %
+        \mbox{$z^2 + z = 2m$}.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Case 2.]{
+        Suppose $z$ is odd. %
+        Then $z = 2k + 1$ with $k \in \Z$. %
+        Thus, %
+        \begin{align*}{
+            z^2 + z &= (2k + 1)^2 + (2k + 1)\\
+                    &= 4k^2 + 4k + 1 + 2k + 1\\
+                    &= 4k^2 + 6k + 2\\
+                    &= 2(2k^2 + 3k + 1).
+        }
+        \end{align*}
+        Let $m \in \Z$ such that $m = 2k^2 + 3k + 1$. %
+        Then $z^2 + z = 2(2k^2 + 3k + 1) = 2m$.
+    }{
+        \textbf{Step 2.} Repeat for the remaining case. %
+        Here, $s \in S_2$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Conclusion.]{
+        In either case, $z^2 + z = 2m$. %
+        Thus, $\exists m \in \Z$ such that \mbox{$z^2 + z = 2m$}. %
+        Therefore, the statement holds by division into cases. \qedhere
+    }{
+        \textbf{Step 3.} Conclude the proof. %
+        Here, the summary states what has been found: %
+        $P(z)$ holds in both cases.
+    }
+    \end{annotatedpanel}
+}
+\end{proof}
