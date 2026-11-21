@@ -62,6 +62,8 @@
     \vspace{7pt}%
 }
 
+\definecolor{oldgold}{HTML}{9E7E38}
+
 \newlength{\annotationwidth}
 \setlength{\annotationwidth}{0.36\textwidth}
 
@@ -76,13 +78,13 @@
         before skip = 14pt, after skip = 14pt,
         underlay = {%
             \begin{tcbclipinterior}
-                \fill[blue!8]
+                \fill[oldgold!15]
                     ([xshift = -\annotationwidth - 32pt]interior.north east)
                     rectangle (interior.south east);
             \end{tcbclipinterior}%
         },
         before lower = {%
-            \panelheading{blue!50!black}{blue!25}{Annotation.}%
+            \panelheading{oldgold}{oldgold!40}{Annotation}%
         }
     }
 }

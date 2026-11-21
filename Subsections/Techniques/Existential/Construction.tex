@@ -10,20 +10,32 @@ Precisely, it proves an existential statement, %
 $\exists s \in S$ such that $P(s)$, by defining a particular element %
 $s_0 \in S$ and showing that $P(s_0)$ is true. %
 Generally, a proof by construction mirrors the following format:
-\begin{enumerate}
+\begin{enumerate}{
     \item \textbf{Setup.} %
         Define a particular element $s_0$ and show that $s_0 \in S$.
     \item \textbf{Verification.} %
         Show that $P(s_0)$ is true.
     \item \textbf{Conclusion.} %
         Conclude the proof, optionally by summarizing what has been found.
+}
 \end{enumerate}
 
 \paragraph{Advice.}
-\begin{itemize}
-    \item A proof by construction can only be applied to existential %
-        statements. It is not sufficient for universal statements.
-    \item One example is sufficient, even though multiple examples may exist.
+\begin{itemize}{
+    \item Use this proof only for an existential statement, %
+        $\exists s \in S$ such that $P(s)$, when an example can be found %
+        explicitly, for instance by guessing, testing small values, %
+        or solving $P(s)$ for $s$. %
+        It cannot prove a universal statement, %
+        since one example does not cover every element of $S$.
+    \item Show both $s_0 \in S$ and $P(s_0)$. %
+        For example, $\frac{1}{2}$ satisfies $2s = 1$, %
+        but $\frac{1}{2} \notin \Z$.
+    \item Choose $s_0$ as a specific value or formula, %
+        not a description such as ``a number that works.'' %
+        If $s_0$ is a formula in terms of given quantities, %
+        $s_0 \in S$ must hold for every allowed value of those quantities.
+}
 \end{itemize}
 
 \paragraph{Example.}
@@ -42,7 +54,7 @@ Generally, a proof by construction mirrors the following format:
     \hyperref[subsections:techniques:existential:construction]{construction}.
 
     \begin{annotatedpanel}[Setup.]{
-        Let $z \in \Z$ with $z = 2$.
+        Let $z \in \Z$ such that $z = 2$.
     }{
         \textbf{Step 1.} Define $s_0$ and show that $s_0 \in S$. %
         Here, $s_0 = 2$ and $S = \Z$.
