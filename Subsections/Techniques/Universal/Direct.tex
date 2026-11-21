@@ -1,2 +1,80 @@
 \subsection{Direct Proof}
 \label{subsections:techniques:universal:direct}
+
+
+
+\paragraph{Description.}
+A direct proof proves a mathematical statement by reasoning straight from %
+what is assumed to what is claimed. %
+Precisely, it proves a universal statement, $\forall s \in S,\ P(s)$, %
+by letting $s \in S$ be arbitrary and deducing that $P(s)$ is true. %
+A proof of a universal statement that uses no specific values is a %
+direct proof. %
+Every subsequent proof in this document is a common application or %
+variation of a direct proof. %
+Generally, a direct proof mirrors the following format:
+\begin{enumerate}{
+    \item \textbf{Setup.} %
+        Let $s \in S$ be arbitrary, assuming any given hypotheses about $s$.
+    \item \textbf{Verification.} %
+        Show that $P(s)$ is true.
+    \item \textbf{Conclusion.} %
+        Conclude the proof, optionally by summarizing what has been found.
+}
+\end{enumerate}
+
+
+
+\paragraph{Advice.}
+\begin{itemize}{
+    \item Use this proof as the default approach for a universal statement, %
+        $\forall s \in S,\ P(s)$.
+    \item Do not assume a specific value for $s$.
+    \item A direct proof may evolve into another proof as it is written, %
+        for instance when a step requires considering cases.
+}
+\end{itemize}
+
+
+
+\paragraph{Example.}
+\begin{exercise}{
+    Prove that if $z \in \Z$ is even, %
+    then $\exists m \in \Z$ such that $z^2 = 4m$.
+}
+\end{exercise}
+\begin{proof}{
+    This statement can be proven by direct proof.
+
+    \begin{annotatedpanel}[Setup.]{
+        Let $z \in \Z$ such that $z$ is even. %
+        Then $z = 2k$ with $k \in \Z$.
+    }{
+        \textbf{Step 1.} Let $s \in S$ be arbitrary, assuming any given %
+        hypotheses. %
+        Here, $S = \Z$, $s = z$, and the hypothesis is that $z$ is even.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Verification.]{
+        Then $z^2 = (2k)^2 = 4k^2$. %
+        Let $m \in \Z$ such that $m = k^2$. %
+        Then $z^2 = 4k^2 = 4m$.
+    }{
+        \textbf{Step 2.} Show that $P(s)$ is true. %
+        Here, $P(z)$ is the statement $\exists m \in \Z$ such that %
+        $z^2 = 4m$, and $m = k^2$ satisfies it.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Conclusion.]{
+        Thus, $\exists m \in \Z$ such that $z^2 = 4m$. %
+        Therefore, the statement holds. \qedhere
+    }{
+        \textbf{Step 3.} Conclude the proof. %
+        Here, the summary states what has been found: %
+        $z^2$ is a multiple of $4$.
+    }
+    \end{annotatedpanel}
+}
+\end{proof}
