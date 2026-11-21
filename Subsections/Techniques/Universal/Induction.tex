@@ -1,2 +1,133 @@
 \subsection{Proof by Mathematical Induction}
 \label{subsections:techniques:universal:induction}
+
+
+
+\paragraph{Description.}
+A proof by induction proves a mathematical statement by showing that it %
+holds for a first case and that each case implies the next. %
+Precisely, it proves a universal statement, %
+$\forall n \in S$ with $n \ge n_0$, $P(n)$, %
+by showing that $P(n_0)$ is true and that $\forall k \in S$ with %
+$k \ge n_0$, if $P(k)$, then $P(k + 1)$. %
+Generally, a proof by induction mirrors the following format:
+\begin{enumerate}{
+    \item \textbf{Setup.} %
+        Define the statement $P(n)$ and identify the smallest case $n_0$.
+    \item \textbf{Base Case.} %
+        Let $n \in S$ such that $n = n_0$ and show that $P(n_0)$ is true.
+    \item \textbf{Inductive Hypothesis.} %
+        Let $k \in S$ such that $k \ge n_0$ and $P(k)$ is true.
+    \item \textbf{Inductive Step.} %
+        Show that $P(k + 1)$ is true by using the inductive hypothesis.
+    \item \textbf{Conclusion.} %
+        Conclude the proof by acknowledging the principle of mathematical %
+        induction, optionally by summarizing what has been found.
+}
+\end{enumerate}
+
+
+
+\paragraph{Advice.}
+\begin{itemize}{
+    \item Use this proof when $P(k + 1)$ can be related to $P(k)$. %
+        A summation sign is a common indication of induction.
+    \item The inductive hypothesis always follows the same format, %
+        copying $P(n)$ with $n$ replaced by $k$. %
+        This is a common source of confusion, as $P(k)$ is assumed %
+        rather than proven.
+    \item In the inductive step, relate $P(k + 1)$ back to $P(k)$ to use %
+        the inductive hypothesis, without assuming $P(k + 1)$. %
+        Optionally, list what is to be proven before doing so.
+}
+\end{itemize}
+
+
+
+\paragraph{Example.}
+\begin{exercise}{
+    Prove that $\forall n \in \Z$ with $n \ge 1$, %
+    $\displaystyle\sum_{i=1}^{n} i = \frac{n(n + 1)}{2}$.
+}
+\end{exercise}
+\begin{proof}{
+    This statement can be proven by induction.
+    \begin{annotatedpanel}[Setup.]{
+        Let $P(n)$ be the statement that
+        \[
+            \sum_{i=1}^{n} i = \frac{n(n + 1)}{2}.
+        \]
+        Since $n \ge 1$, the smallest case is $n_0 = 1$.
+    }{
+        \textbf{Step 1.} Define $P(n)$ and identify the smallest case %
+        $n_0$. %
+        Here, $S = \Z$ and $n_0 = 1$, as the exercise requires $n \ge 1$.
+    }
+    \end{annotatedpanel}
+    \begin{annotatedpanel}[Base Case.]{
+        Let $n \in \Z$ such that $n = 1$. %
+        Then
+        \begin{align*}{
+            \sum_{i=1}^{n} i &= \sum_{i=1}^{1} i = 1,\\
+            \frac{n(n + 1)}{2} &= \frac{1(1 + 1)}{2}
+                = \frac{1(2)}{2} = \frac{2}{2} = 1.
+        }
+        \end{align*}
+        Thus, $1 = 1$, so $P(1)$ is true.
+    }{
+        \textbf{Step 2.} Let $n \in S$ such that $n = n_0$ and show that %
+        $P(n_0)$ is true. %
+        Here, $n_0 = 1$ is the smallest possible case based on $n \ge 1$.
+    }
+    \end{annotatedpanel}
+    \begin{annotatedpanel}[Inductive Hypothesis.]{
+        Let $k \in \Z$ such that $k \ge 1$ and $P(k)$ is true.
+    }{
+        \textbf{Step 3.} Let $k \in S$ such that $k \ge n_0$ and $P(k)$ %
+        is true. %
+        Here, $S = \Z$, $k$ is at least the largest base case, and $P(k)$ is %
+        $P(n)$ copied with $n$ replaced by $k$.
+    }
+    \end{annotatedpanel}
+    \begin{annotatedpanel}[Inductive Step.]{
+        Consider $P(k + 1)$. %
+        We want to prove that
+        \[
+            \sum_{i=1}^{k+1} i = \frac{(k + 1)((k + 1) + 1)}{2}.
+        \]
+        Note that
+        \[
+            \sum_{i=1}^{k+1} i = (k + 1) + \sum_{i=1}^{k} i.
+        \]
+        By the inductive hypothesis,
+        \begin{align*}{
+            \sum_{i=1}^{k+1} i &= (k + 1) + \frac{k(k + 1)}{2}\\
+                &= (k + 1) + \frac{k^2 + k}{2}\\
+                &= \frac{2k + 2}{2} + \frac{k^2 + k}{2}\\
+                &= \frac{k^2 + 3k + 2}{2}\\
+                &= \frac{(k + 1)(k + 2)}{2}.
+        }
+        \end{align*}
+        Thus, $P(k + 1)$ is true.
+    }{
+        \textbf{Step 4.} Show that $P(k + 1)$ is true by using the %
+        inductive hypothesis. %
+        Here, the sum splits into $k + 1$ and the sum up to $k$, %
+        which the inductive hypothesis replaces. %
+        The line beginning ``We want to prove'' is optional.
+    }
+    \end{annotatedpanel}
+    \begin{annotatedpanel}[Conclusion.]{
+        Thus, $\forall n \in \Z$ with $n \ge 1$, %
+        $\displaystyle\sum_{i=1}^{n} i = \frac{n(n + 1)}{2}$. %
+        Therefore, the statement holds by the principle of mathematical %
+        induction. \qedhere
+    }{
+        \textbf{Step 5.} Conclude the proof by acknowledging the principle %
+        of mathematical induction. %
+        Here, the summary states what has been found: %
+        $P(1)$ is true, and $P(k + 1)$ is true whenever $P(k)$ is true.
+    }
+    \end{annotatedpanel}
+}
+\end{proof}
