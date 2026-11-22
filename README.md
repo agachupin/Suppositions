@@ -20,6 +20,17 @@ This document examines standard proof techniques found in discrete
 mathematics. It combines meticulous explanations with example applications
 to accessibly define and demonstrate each approach.
 
+## Acknowledgments
+
+The questions and the list of topics in this document were written by
+Dr. Abbey Bourdon of Wake Forest University, who created them for the
+homework assignment that this document was prepared to fulfill. The
+author's contribution consists of the explanations, the annotated
+examples, and the solutions that respond to her assignment.
+
+Artificial intelligence was used extensively for formatting, in particular
+for the custom commands, environments, and styling in `Commands.tex`.
+
 ## Overview
 
 Each proof technique is presented in three parts:
@@ -94,7 +105,7 @@ cross-references. Alternatively, run `pdflatex Suppositions.tex` twice.
 ```
 .
 ├── Suppositions.tex        Main document: preamble, metadata, and structure
-├── Commands.tex            Custom commands, environments, and styling
+├── Commands.tex            Custom commands, environments, and styling (AI-assisted)
 ├── Subsections/
 │   ├── Techniques/
 │   │   ├── Existential/    Techniques for existential statements

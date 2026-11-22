@@ -1,11 +1,14 @@
+% Formatting for this document, including the commands, environments, and
+% styling defined in this file, was produced largely with the assistance of
+% artificial intelligence. See the Acknowledgments in Suppositions.tex.
 \newcommand{\titleuppercase}[1]{\textls[50]{\MakeUppercase{#1}}}
-
+ 
 \titleformat{\section}[block]%
     {\large\bfseries\filcenter}%
     {\mdseries\thesection}%
     {1em}%
     {\titleuppercase}
-
+ 
 \let\sectionstyle\section
 \RenewDocumentCommand{\section}{s o m}{%
     \IfBooleanTF{#1}{%
@@ -18,20 +21,20 @@
         \vspace*{\fill}%
     }%
 }
-
+ 
 \titleformat{\subsection}[block]%
     {\normalsize\bfseries}%
     {\mdseries\thesubsection}%
     {1em}%
     {\titleuppercase}
-
+ 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
-
+ 
 \renewcommand{\proofname}{\upshape\bfseries Proof}
 \theoremstyle{definition}
 \newtheorem*{exercise}{Exercise}
-
+ 
 \NewTColorBox{panel}{o}{
     enhanced, unbreakable,
     frame hidden, boxrule = 0pt, colback = black!3,
@@ -50,9 +53,9 @@
         }%
     }
 }
-
-
-
+ 
+ 
+ 
 \newcommand{\panelheading}[3]{%
     {\small\bfseries\color{#1}\titleuppercase{#3}\par}%
     \nointerlineskip
@@ -61,12 +64,12 @@
     \nointerlineskip
     \vspace{7pt}%
 }
-
+ 
 \definecolor{oldgold}{HTML}{9E7E38}
-
+ 
 \newlength{\annotationwidth}
 \setlength{\annotationwidth}{0.36\textwidth}
-
+ 
 \tcbset{
     annotated/.style = {
         enhanced, unbreakable,
@@ -88,7 +91,7 @@
         }
     }
 }
-
+ 
 \NewDocumentEnvironment{annotatedpanel}{o m m}{%
     \begin{tcolorbox}[
         annotated,
@@ -102,7 +105,7 @@
         \small #3
     \end{tcolorbox}%
 }{}
-
+ 
 \NewDocumentEnvironment{annotatedtext}{m m}{%
     \begin{tcolorbox}[
         annotated,
