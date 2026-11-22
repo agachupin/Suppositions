@@ -55,36 +55,36 @@
     \end{panel}
 
     \begin{panel}[Inductive Hypothesis.]{
-        $\exists k \in \Z$ with $k \geq 1$ such that %
+        $\exists n \in \Z$ with $n \geq 1$ such that %
         \[
-            (1, 2, 3, \dotsc, k) \cdot (1!, 2!, 3!, \dotsc, k!) = (k + 1)! - 1.
+            (1, 2, 3, \dotsc, n) \cdot (1!, 2!, 3!, \dotsc, n!) = (n + 1)! - 1.
         \]
     }
     \end{panel}
 
-    \begin{panel}[Induction: Consider $k + 1$.]{
+    \begin{panel}[Induction: Consider $n + 1$.]{
         We want to demonstrate that %
         \[
-            [1, 2, 3, \dotsc, k, (k + 1)] \cdot
-            [1!, 2!, 3!, \dotsc, k!, (k + 1)!] = [(k + 1) + 1]! - 1.
+            [1, 2, 3, \dotsc, n, (n + 1)] \cdot
+            [1!, 2!, 3!, \dotsc, n!, (n + 1)!] = [(n + 1) + 1]! - 1.
         \]
         Per the inductive hypothesis and sequence definition, %
         \begin{align*}{
-            [1, 2, 3, \dotsc, k, (k + 1)] \cdot
-            [1!, 2!, 3!, \dotsc, k!, (k + 1)!]
-                &= [(k + 1)! - 1] + (k + 1)(k + 1)!\\
-                &= (k + 1)! + (k + 1)(k + 1)! - 1\\
-                &= (k + 1)! \cdot [1 + (k + 1)] - 1\\
-                &= (k + 1)! \cdot (k + 2) - 1\\
-                &= (k + 2)! - 1\\
-                &= [(k + 1) + 1]! - 1.
+            [1, 2, 3, \dotsc, n, (n + 1)] \cdot
+            [1!, 2!, 3!, \dotsc, n!, (n + 1)!]
+                &= [(n + 1)! - 1] + (n + 1)(n + 1)!\\
+                &= (n + 1)! + (n + 1)(n + 1)! - 1\\
+                &= (n + 1)! \cdot [1 + (n + 1)] - 1\\
+                &= (n + 1)! \cdot (n + 2) - 1\\
+                &= (n + 2)! - 1\\
+                &= [(n + 1) + 1]! - 1.
         }
         \end{align*}
     }
     \end{panel}
 
     Thus, the statement holds for $n = 1$, %
-    and if it holds for $k$, then it holds for $k + 1$. %
+    and if it holds for $n$, then it holds for $n + 1$. %
     Therefore, the statement holds by the principle of mathematical induction.
 }
 \end{proof}

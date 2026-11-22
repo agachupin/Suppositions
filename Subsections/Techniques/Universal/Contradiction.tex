@@ -6,18 +6,18 @@
 \paragraph{Description.}
 A proof by contradiction proves a mathematical statement by showing that %
 its negation cannot be true. %
-Precisely, it proves a statement $A$ by assuming $\neg A$ and deriving a %
+Precisely, it proves a statement $P$ by assuming $\neg P$ and deriving a %
 contradiction, meaning statements $C$ and $\neg C$ that are both true. %
 This works because a statement is either true or false: %
-if $\neg A$ is false, then $A$ is true. %
+if $\neg P$ is false, then $P$ is true. %
 Generally, a proof by contradiction mirrors the following format:
 \begin{enumerate}{
     \item \textbf{Setup.} %
-        Assume that $\neg A$ is true.
+        Assume that $\neg P$ is true.
     \item \textbf{Verification.} %
         Derive a contradiction by showing that $C$ and $\neg C$ are true.
     \item \textbf{Conclusion.} %
-        Conclude that $\neg A$ is false and therefore that $A$ is true, %
+        Conclude that $\neg P$ is false and therefore that $P$ is true, %
         optionally by summarizing what has been found.
 }
 \end{enumerate}
@@ -26,9 +26,9 @@ Generally, a proof by contradiction mirrors the following format:
 
 \paragraph{Advice.}
 \begin{itemize}{
-    \item Use this proof when assuming $\neg A$ gives something concrete %
-        to work with, such as when $A$ claims that something does not exist.
-    \item State the assumption $\neg A$ explicitly at the start of the %
+    \item Use this proof when assuming $\neg P$ gives something concrete %
+        to work with, such as when $P$ claims that something does not exist.
+    \item State the assumption $\neg P$ explicitly at the start of the %
         proof, for example with ``Suppose, for contradiction, that $\dots$'' %
         as the purpose of the proof can otherwise be unclear.
 }
@@ -48,9 +48,9 @@ Generally, a proof by contradiction mirrors the following format:
         Suppose, for contradiction, that $\exists z \in \Z$ such that %
         $2z = 1$.
     }{
-        \textbf{Step 1.} Assume that $\neg A$ is true. %
-        Here, $A$ is the statement $\neg\exists z \in \Z$ such that %
-        $2z = 1$, so $\neg A$ is the statement $\exists z \in \Z$ such that %
+        \textbf{Step 1.} Assume that $\neg P$ is true. %
+        Here, $P$ is the statement $\neg\exists z \in \Z$ such that %
+        $2z = 1$, so $\neg P$ is the statement $\exists z \in \Z$ such that %
         $2z = 1$.
     }
     \end{annotatedpanel}
@@ -71,8 +71,8 @@ Generally, a proof by contradiction mirrors the following format:
         is false, so $\neg\exists z \in \Z$ such that $2z = 1$. %
         Therefore, the statement holds by contradiction. \qedhere
     }{
-        \textbf{Step 3.} Conclude that $\neg A$ is false and therefore that %
-        $A$ is true. %
+        \textbf{Step 3.} Conclude that $\neg P$ is false and therefore that %
+        $P$ is true. %
         Here, the summary states what has been found: %
         the assumption is false.
     }
