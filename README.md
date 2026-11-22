@@ -76,10 +76,9 @@ document.
 
 ## Status
 
-This document is in active development, and the complete version will be
-released on November 23, 2026. The most recent compiled draft is
-[Suppositions.pdf](Suppositions.pdf); the complete version will be
-published under [Releases](https://github.com/agachupin/suppositions/releases).
+This document is complete. The final version is
+[Suppositions.pdf](Suppositions.pdf). To report a correction, see
+[Errata](#errata).
 
 ## Building from Source
 
