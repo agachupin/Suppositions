@@ -37,9 +37,9 @@ Each proof technique is presented in three parts:
 
 1. **Description:** the logical structure of the technique and a general
    outline of its format.
-2. **Applicability:** guidance on the kinds of statements for which the
+2. **Advice:** guidance on the kinds of statements for which the
    technique is suited.
-3. **Annotated example:** a complete proof in which each step is labeled
+3. **Example:** a complete proof in which each step is labeled
    with the part of the general format it carries out.
 
 The techniques are organized by the logical form of the statement being
@@ -48,11 +48,11 @@ those before it. A collection of example problems concludes the document.
 
 ## Contents
 
-### 1 Proof Techniques for Existential Statements
+### 1 Existential Statements
 
 - 1.1 Proof by Construction
 
-### 2 Proof Techniques for Universal Statements
+### 2 Universal Statements
 
 - 2.1 Proof by Exhaustion
 - 2.2 Direct Proof
@@ -63,7 +63,6 @@ those before it. A collection of example problems concludes the document.
 - 2.7 Proof of Subset Containment
 - 2.8 Proof of Injectivity
 - 2.9 Proof of Surjectivity
-- 2.10 Proof of Bijectivity
 
 ### 3 Example Problems
 

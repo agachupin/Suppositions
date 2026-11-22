@@ -36,14 +36,14 @@
     }
     \end{panel}
 
-    \begin{panel}[Case 1: Suppose that $m = 0$ and $n = 0$.]{
+    \begin{panel}[Case 1: Suppose $m = 0$ and $n = 0$.]{
         Observe that $0^2 + 0^2 = 0 < r^2$. %
         Therefore, the origin $(0, 0)$ is inside the circle, %
         giving exactly $1$ lattice point.
     }
     \end{panel}
 
-    \begin{panel}[Case 2: Suppose that exactly one of $m$ and $n$ is $0$.]{
+    \begin{panel}[Case 2: Suppose exactly one of $m$ and $n$ is $0$.]{
         Then $d = \sqrt{m^2 + n^2}$ is the absolute value of the nonzero %
         coordinate of $(m, n)$, so $d \in \Z$ with $d > 0$. %
         Thus, $(m, n)$ is one of the points %
@@ -53,14 +53,14 @@
         These are four distinct lattice points, since $d \neq 0$. %
         Each point is at distance $d < r$ from the origin, %
         so all four points are inside the circle. %
-        Since $d$ is determined by the point, distinct values of $d$ give %
-        disjoint sets. %
-        Therefore, the lattice points in this case are partitioned into %
-        sets of $4$.
+        Since $d$ is determined by the point, no point belongs to two of %
+        these groups. %
+        Therefore, the lattice points in this case form separate groups %
+        of $4$.
     }
     \end{panel}
 
-    \begin{panel}[Case 3: Suppose that $m \neq 0$ and $n \neq 0$.]{
+    \begin{panel}[Case 3: Suppose $m \neq 0$ and $n \neq 0$.]{
         Then $(m, n)$ is one of the points %
         \[
             (|m|, |n|), \quad (-|m|, |n|), \quad
@@ -71,16 +71,16 @@
         Each point is at distance $d < r$ from the origin, %
         so all four points are inside the circle. %
         Since the pair $(|m|, |n|)$ is determined by the point, %
-        distinct pairs give disjoint sets. %
-        Therefore, the lattice points in this case are partitioned into %
-        sets of $4$.
+        no point belongs to two of these groups. %
+        Therefore, the lattice points in this case form separate groups %
+        of $4$.
     }
     \end{panel}
 
     \begin{panel}[Combining the cases.]{
         Since $m^2 + n^2 < r^2$ implies $|m| < r$ and $|n| < r$, %
         only finitely many lattice points are inside the circle. %
-        Since the lattice points in Cases 2 and 3 are partitioned into sets %
+        Since the lattice points in Cases 2 and 3 form separate groups %
         of $4$, $\exists k \in \Z$ with $k \geq 0$ such that they total %
         $4k$ points. %
         Adding the $1$ point from Case 1, %

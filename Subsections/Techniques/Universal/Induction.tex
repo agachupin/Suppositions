@@ -4,13 +4,13 @@
 
 
 \paragraph{Description.}
-A proof by induction proves a mathematical statement by showing that it %
+A proof by mathematical induction proves a mathematical statement by showing that it %
 holds for a first case and that each case implies the next. %
 Precisely, it proves a universal statement, %
 $\forall z \in \Z$ with $z \ge z_0$, $P(z)$, %
 by showing that $P(z_0)$ is true and that $\forall z \in \Z$ with %
 $z \ge z_0$, if $P(z)$, then $P(z + 1)$. %
-Generally, a proof by induction mirrors the following format:
+Generally, a proof by mathematical induction mirrors the following format:
 \begin{enumerate}{
     \item \textbf{Setup.} %
         Define the statement $P(z)$ and identify the smallest case $z_0$.
@@ -51,7 +51,7 @@ Generally, a proof by induction mirrors the following format:
 }
 \end{exercise}
 \begin{proof}{
-    This statement can be proven by induction.
+    This statement can be proven by mathematical induction.
     \begin{annotatedpanel}[Setup.]{
         Let $P(z)$ be the statement that
         \[
@@ -85,7 +85,7 @@ Generally, a proof by induction mirrors the following format:
     }{
         \textbf{Step 3.} Let $z \in \Z$ such that $z \ge z_0$ and $P(z)$ %
         is true. %
-        Here, $z$ is at least the largest base case, and $P(z)$ is %
+        Here, $z$ is at least the base case, $z_0 = 1$, and $P(z)$ is %
         assumed rather than proven.
     }
     \end{annotatedpanel}

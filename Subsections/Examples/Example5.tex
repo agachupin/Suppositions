@@ -33,7 +33,8 @@
         if $\exists a \in A$ with $b = f(a)$, then $a$ is unique. %
         Thus, the first case gives each such $b$ exactly one output. %
         The second case gives every other $b \in B$ the output $a_0$. %
-        Therefore, $g$ is a well-defined function.
+        Therefore, $g$ assigns exactly one output to every $b \in B$, %
+        so $g$ is a function.
 
         To prove $g$ is a left inverse of $f$, let $a \in A$. %
         By the definition of $g$, %
@@ -57,7 +58,7 @@
         \[
             a_1 = g(f(a_1)) = g(f(a_2)) = a_2.
         \]
-        Thus, $\forall a_1, a_2 \in A$, $f(a_1) = f(a_2) \implies a_1 = a_2$. %
+        Thus, $\forall a_1, a_2 \in A$, if $f(a_1) = f(a_2)$, then $a_1 = a_2$. %
         Therefore, $f$ is injective.
     }
     \end{panel}

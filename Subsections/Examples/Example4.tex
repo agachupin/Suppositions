@@ -29,6 +29,15 @@
     \hyperref[subsections:techniques:universal:induction]
         {mathematical induction}.
 
+    \begin{panel}[Setup.]{
+        Let $P(n)$ be the statement that %
+        \[
+            (1, 2, 3, \dotsc, n) \cdot (1!, 2!, 3!, \dotsc, n!) = (n + 1)! - 1.
+        \]
+        Since $n > 0$, the smallest case is $n_0 = 1$.
+    }
+    \end{panel}
+
     \begin{panel}[Base Case: Let $n = 1$.]{
         Then %
         \begin{align*}{
@@ -47,31 +56,28 @@
                 &= 1.
         }
         \end{align*}
-        Thus, %
-        \[
-            (1, 2, 3, \dotsc, n) \cdot (1!, 2!, 3!, \dotsc, n!) = (n + 1)! - 1.
-        \]
+        Thus, $1 = 1$, so $P(1)$ is true.
     }
     \end{panel}
 
     \begin{panel}[Inductive Hypothesis.]{
-        $\exists n \in \Z$ with $n \geq 1$ such that %
+        Let $n \in \Z$ such that $n \geq 1$ and $P(n)$ is true, that is, %
         \[
             (1, 2, 3, \dotsc, n) \cdot (1!, 2!, 3!, \dotsc, n!) = (n + 1)! - 1.
         \]
     }
     \end{panel}
 
-    \begin{panel}[Induction: Consider $n + 1$.]{
-        We want to demonstrate that %
+    \begin{panel}[Inductive Step: Consider $P(n + 1)$.]{
+        We want to prove that %
         \[
-            [1, 2, 3, \dotsc, n, (n + 1)] \cdot
-            [1!, 2!, 3!, \dotsc, n!, (n + 1)!] = [(n + 1) + 1]! - 1.
+            (1, 2, 3, \dotsc, n, n + 1) \cdot
+            (1!, 2!, 3!, \dotsc, n!, (n + 1)!) = [(n + 1) + 1]! - 1.
         \]
-        Per the inductive hypothesis and sequence definition, %
+        By the inductive hypothesis and the definition of the dot product, %
         \begin{align*}{
-            [1, 2, 3, \dotsc, n, (n + 1)] \cdot
-            [1!, 2!, 3!, \dotsc, n!, (n + 1)!]
+            (1, 2, 3, \dotsc, n, n + 1) \cdot
+            (1!, 2!, 3!, \dotsc, n!, (n + 1)!)
                 &= [(n + 1)! - 1] + (n + 1)(n + 1)!\\
                 &= (n + 1)! + (n + 1)(n + 1)! - 1\\
                 &= (n + 1)! \cdot [1 + (n + 1)] - 1\\
@@ -80,6 +86,7 @@
                 &= [(n + 1) + 1]! - 1.
         }
         \end{align*}
+        Thus, $P(n + 1)$ is true.
     }
     \end{panel}
 
