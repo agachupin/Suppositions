@@ -1,2 +1,74 @@
 \subsection{Proof of Surjectivity}
 \label{subsections:techniques:universal:surjective}
+
+
+
+\paragraph{Description.}
+A proof of surjectivity proves that a function is onto, %
+meaning that every element of the codomain is an output. %
+Precisely, it proves that a function $f : X \to Y$ satisfies %
+$\forall y \in Y$, $\exists x \in X$ such that $f(x) = y$. %
+Generally, a proof of surjectivity mirrors the following format:
+\begin{enumerate}{
+    \item \textbf{Setup.} %
+        Let $y \in Y$.
+    \item \textbf{Verification.} %
+        Define $x$ in terms of $y$ such that $x \in X$, %
+        and show that $f(x) = y$.
+    \item \textbf{Conclusion.} %
+        Conclude the proof, optionally by summarizing what has been found.
+}
+\end{enumerate}
+
+
+
+\paragraph{Advice.}
+\begin{itemize}{
+    \item Use this proof for a statement that a function is onto, %
+        also called surjective.
+    \item Solve $f(x) = y$ for $x$ to find $x$ in terms of $y$, %
+        then confirm that $x \in X$ for every $y \in Y$.
+}
+\end{itemize}
+
+
+
+\paragraph{Example.}
+\begin{exercise}{
+    Let $f : \R \to \R$ be defined by $f(x) = 2x + 1$. %
+    Prove that $f$ is onto.
+}
+\end{exercise}
+\begin{proof}{
+    This statement can be proven by showing that $f$ is onto.
+
+    \begin{annotatedpanel}[Setup.]{
+        Let $y \in \R$.
+    }{
+        \textbf{Step 1.} Let $y \in Y$. %
+        Here, $Y = \R$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Verification.]{
+        Let $x \in \R$ such that $x = \frac{y - 1}{2}$. %
+        Then $f(x) = 2\left(\frac{y - 1}{2}\right) + 1 = y$.
+    }{
+        \textbf{Step 2.} Define $x$ in terms of $y$ such that $x \in X$, %
+        and show that $f(x) = y$. %
+        Here, solving $2x + 1 = y$ gives $x = \frac{y - 1}{2}$, %
+        which is in $\R$ for every $y \in \R$.
+    }
+    \end{annotatedpanel}
+
+    \begin{annotatedpanel}[Conclusion.]{
+        Thus, $\forall y \in \R$, $\exists x \in \R$ such that $f(x) = y$. %
+        Therefore, the statement holds by the definition of onto. \qedhere
+    }{
+        \textbf{Step 3.} Conclude the proof. %
+        Here, the summary states what has been found: %
+        every element of $\R$ is an output of $f$.
+    }
+    \end{annotatedpanel}
+}
+\end{proof}
