@@ -1,18 +1,20 @@
 cff-version: 1.2.0
 message: "If you reference this work, please cite it as below."
 type: software
-title: "Suppositions: Standard Proof Techniques in Discrete Mathematics and Example Applications"
+title: >-
+  Suppositions: Standard Proof Techniques in Discrete Mathematics and
+  Example Applications
 abstract: >-
   This document examines standard proof techniques found in discrete
-  mathematics. It combines meticulous explanations with example
-  applications to accessibly define and demonstrate each approach.
+  mathematics. It explains each technique, outlines its general format,
+  and demonstrates it with an annotated example.
 authors:
   - family-names: Gachupin
     given-names: "Alejandro [Esteban]"
     affiliation: Wake Forest University
     email: gachae25@wfu.edu
     website: "https://github.com/agachupin"
-# Questions and topic list: Dr. Abbey Bourdon, Wake Forest University.
+# Topic list and example problems: Dr. Abbey Bourdon, Wake Forest University.
 # Formatting (notably Commands.tex): largely AI-assisted.
 keywords:
   - discrete mathematics
@@ -24,7 +26,9 @@ url: "https://github.com/agachupin/suppositions"
 date-released: "2026-11-23"
 preferred-citation:
   type: unpublished
-  title: "Suppositions: Standard Proof Techniques in Discrete Mathematics and Example Applications"
+  title: >-
+    Suppositions: Standard Proof Techniques in Discrete Mathematics and
+    Example Applications
   authors:
     - family-names: Gachupin
       given-names: "Alejandro [Esteban]"
@@ -45,5 +49,5 @@ preferred-citation:
     - mathematical proof
   abstract: >-
     This document examines standard proof techniques found in discrete
-    mathematics. It combines meticulous explanations with example
-    applications to accessibly define and demonstrate each approach.
+    mathematics. It explains each technique, outlines its general format,
+    and demonstrates it with an annotated example.

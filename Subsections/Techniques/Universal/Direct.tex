@@ -6,12 +6,13 @@
 \paragraph{Description.}
 A direct proof proves a mathematical statement by reasoning straight from %
 what is assumed to what is claimed. %
-Precisely, it proves a universal statement, $\forall s \in S,\ P(s)$, %
+Precisely, it proves a universal statement, %
+``$\forall s \in S,\ P(s)$,'' %
 by letting $s \in S$ be arbitrary and deducing that $P(s)$ is true. %
-Because $s$ is arbitrary, no specific value is used, %
-so the argument holds for every element of $S$. %
-Most subsequent proofs in this document are common applications or %
-variations of a direct proof. %
+Since $s$ is arbitrary rather than a specific value, %
+the argument holds for every element of $S$. %
+Most of the proof techniques that follow in this document are %
+applications or variations of a direct proof. %
 Generally, a direct proof mirrors the following format:
 \begin{enumerate}{
     \item \textbf{Setup.} %
@@ -28,10 +29,12 @@ Generally, a direct proof mirrors the following format:
 \paragraph{Advice.}
 \begin{itemize}{
     \item Use this proof as the default approach for a universal statement, %
-        $\forall s \in S,\ P(s)$.
-    \item Do not assume a specific value for $s$.
+        ``$\forall s \in S,\ P(s)$.''
+    \item Do not assume a specific value for $s$, %
+        as the argument must hold for every element of $S$.
     \item A direct proof may evolve into another proof as it is written, %
-        for instance when a step requires considering cases.
+        for instance when a step requires considering %
+        \hyperref[subsections:techniques:universal:cases]{cases}.
 }
 \end{itemize}
 
@@ -52,7 +55,8 @@ Generally, a direct proof mirrors the following format:
     }{
         \textbf{Step 1.} Let $s \in S$ be arbitrary, assuming any given %
         hypotheses. %
-        Here, $S = \Z$, $s = z$, and the hypothesis is that $z$ is even.
+        Here, $S = \Z$, $s = z$, and the hypothesis is that $z$ is even. %
+        By the definition of even, $z = 2k$ with $k \in \Z$.
     }
     \end{annotatedpanel}
 
@@ -63,7 +67,8 @@ Generally, a direct proof mirrors the following format:
     }{
         \textbf{Step 2.} Show that $P(s)$ is true. %
         Here, $P(z)$ is the statement $\exists m \in \Z$ such that %
-        $z^2 = 4m$, and $m = k^2$ satisfies it.
+        $z^2 = 4m$. %
+        Since $z^2 = 4k^2$, choosing $m = k^2$ satisfies it.
     }
     \end{annotatedpanel}
 

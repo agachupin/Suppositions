@@ -6,12 +6,13 @@
 \paragraph{Description.}
 A proof of subset containment proves that one set is contained in another %
 by showing that every element of the first is an element of the second. %
-Precisely, it proves that $A \subseteq B$, meaning $\forall a \in A$, %
-$a \in B$, by letting $a \in A$ and showing that $a \in B$. %
+Precisely, it proves that $A \subseteq B$, %
+meaning ``$\forall a \in A$, $a \in B$,'' %
+by letting $a \in A$ be arbitrary and showing that $a \in B$. %
 Generally, a proof of subset containment mirrors the following format:
 \begin{enumerate}{
     \item \textbf{Setup.} %
-        Let $a \in A$.
+        Let $a \in A$ be arbitrary.
     \item \textbf{Verification.} %
         Show that $a \in B$.
     \item \textbf{Conclusion.} %
@@ -26,7 +27,7 @@ Generally, a proof of subset containment mirrors the following format:
     \item Use this proof for a statement of the form $A \subseteq B$. %
         To prove $A = B$, prove both $A \subseteq B$ and $B \subseteq A$.
     \item Rewrite $a \in A$ using the definition of $A$, and finish by %
-        satisfying the definition of $B$.
+        showing that $a$ satisfies the definition of $B$.
 }
 \end{itemize}
 
@@ -39,13 +40,13 @@ Generally, a proof of subset containment mirrors the following format:
 }
 \end{exercise}
 \begin{proof}{
-    This statement can be proven by subset containment.
+    This statement can be proven by the definition of a subset.
 
     \begin{annotatedpanel}[Setup.]{
         Let $a \in A$. %
         Then $a = 4k$ with $k \in \Z$.
     }{
-        \textbf{Step 1.} Let $a \in A$. %
+        \textbf{Step 1.} Let $a \in A$ be arbitrary. %
         Here, $a \in A$ means that $a = 4k$ with $k \in \Z$.
     }
     \end{annotatedpanel}
@@ -56,13 +57,15 @@ Generally, a proof of subset containment mirrors the following format:
         Thus, $a \in B$.
     }{
         \textbf{Step 2.} Show that $a \in B$. %
-        Here, $a \in B$ means that $a = 2m$ with $m \in \Z$.
+        Here, $a \in B$ means that $a = 2m$ with $m \in \Z$. %
+        Since $4k = 2(2k)$, choosing $m = 2k$ satisfies it.
     }
     \end{annotatedpanel}
 
     \begin{annotatedpanel}[Conclusion.]{
         Thus, $\forall a \in A$, $a \in B$, so $A \subseteq B$. %
-        Therefore, the statement holds by subset containment. \qedhere
+        Therefore, the statement holds by the definition of a subset. %
+        \qedhere
     }{
         \textbf{Step 3.} Conclude the proof. %
         Here, the summary states what has been found: %

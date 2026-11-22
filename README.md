@@ -8,7 +8,9 @@
 Wake Forest University<br>
 2026
 
-[Read the Document](Suppositions.pdf) · [Cite This Work](#citation) · [License](#license)
+[Read the Document](Suppositions.pdf) ·
+[Cite This Work](#citation) ·
+[License](#license)
 
 </div>
 
@@ -26,8 +28,8 @@ for the custom commands, environments, and styling in `Commands.tex`.
 ## Abstract
 
 This document examines standard proof techniques found in discrete
-mathematics. It combines meticulous explanations with example applications
-to accessibly define and demonstrate each approach.
+mathematics. It explains each technique, outlines its general format, and
+demonstrates it with an annotated example.
 
 ## Overview
 
@@ -41,8 +43,9 @@ Each proof technique is presented in three parts:
    with the part of the general format it carries out.
 
 The techniques are organized by the logical form of the statement being
-proved, existential or universal, and are ordered so that each builds on
-those before it. A collection of example problems concludes the document.
+proved, existential or universal, and are generally ordered so that each
+builds on those before it. A collection of example problems concludes the
+document.
 
 ## Contents
 
@@ -86,7 +89,7 @@ published under [Releases](https://github.com/agachupin/suppositions/releases).
   [TeX Live](https://tug.org/texlive/) or [MiKTeX](https://miktex.org/)
 - The following packages, all included in a full installation:
   `amsmath`, `amssymb`, `amsthm`, `geometry`, `hyperref`, `lmodern`,
-  `mathtools`, `microtype`, `setspace`, `tcolorbox`, `titlesec`, `tocloft`
+  `mathtools`, `microtype`, `setspace`, `tcolorbox`, `titlesec`
 
 ### Compilation
 
@@ -101,8 +104,8 @@ cross-references. Alternatively, run `pdflatex Suppositions.tex` twice.
 
 ```
 .
-├── Suppositions.tex        Main document: preamble, metadata, and structure
-├── Commands.tex            Custom commands, environments, and styling (AI-assisted)
+├── Suppositions.tex        Main document: preamble, metadata, structure
+├── Commands.tex            Commands, environments, styling (AI-assisted)
 ├── Subsections/
 │   ├── Techniques/
 │   │   ├── Existential/    Techniques for existential statements
@@ -152,9 +155,9 @@ If you reference this work, please cite it as follows.
   url          = {https://github.com/agachupin/suppositions},
   keywords     = {discrete mathematics, proof techniques},
   abstract     = {This document examines standard proof techniques found in
-                  discrete mathematics. It combines meticulous explanations
-                  with example applications to accessibly define and
-                  demonstrate each approach.}
+                  discrete mathematics. It explains each technique,
+                  outlines its general format, and demonstrates it with an
+                  annotated example.}
 }
 ```
 
@@ -174,9 +177,9 @@ If you reference this work, please cite it as follows.
   note         = {Unpublished manuscript. Licensed under CC BY-NC-SA 4.0},
   keywords     = {discrete mathematics, proof techniques},
   abstract     = {This document examines standard proof techniques found in
-                  discrete mathematics. It combines meticulous explanations
-                  with example applications to accessibly define and
-                  demonstrate each approach.}
+                  discrete mathematics. It explains each technique,
+                  outlines its general format, and demonstrates it with an
+                  annotated example.}
 }
 ```
 

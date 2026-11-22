@@ -7,7 +7,8 @@
 A proof by contradiction proves a mathematical statement by showing that %
 its negation cannot be true. %
 Precisely, it proves a statement $P$ by assuming $\neg P$ and deriving a %
-contradiction, meaning statements $C$ and $\neg C$ that are both true. %
+contradiction, meaning a statement $C$ such that $C$ and $\neg C$ are %
+both true. %
 This works because a statement is either true or false: %
 if $\neg P$ is false, then $P$ is true. %
 Generally, a proof by contradiction mirrors the following format:
@@ -15,7 +16,8 @@ Generally, a proof by contradiction mirrors the following format:
     \item \textbf{Setup.} %
         Assume that $\neg P$ is true.
     \item \textbf{Verification.} %
-        Derive a contradiction by showing that $C$ and $\neg C$ are true.
+        Derive a contradiction by showing that $C$ and $\neg C$ are both %
+        true.
     \item \textbf{Conclusion.} %
         Conclude that $\neg P$ is false and therefore that $P$ is true, %
         optionally by summarizing what has been found.
@@ -60,9 +62,10 @@ Generally, a proof by contradiction mirrors the following format:
         This contradicts $z \in \Z$.
     }{
         \textbf{Step 2.} Derive a contradiction by showing that $C$ and %
-        $\neg C$ are true. %
+        $\neg C$ are both true. %
         Here, $C$ is the statement $z \in \Z$ and $\neg C$ is the %
-        statement $z \notin \Z$, which follows from $z = \frac{1}{2}$.
+        statement $z \notin \Z$, which follows from dividing $2z = 1$ %
+        by $2$.
     }
     \end{annotatedpanel}
 
@@ -74,7 +77,7 @@ Generally, a proof by contradiction mirrors the following format:
         \textbf{Step 3.} Conclude that $\neg P$ is false and therefore that %
         $P$ is true. %
         Here, the summary states what has been found: %
-        the assumption is false.
+        no integer $z$ satisfies $2z = 1$.
     }
     \end{annotatedpanel}
 }

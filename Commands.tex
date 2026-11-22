@@ -1,14 +1,29 @@
 % Formatting for this document, including the commands, environments, and
 % styling defined in this file, was produced largely with the assistance of
 % artificial intelligence. See the Acknowledgments in Suppositions.tex.
+
+
+
+% Colors
+% Link gold is old gold darkened for legible text on white.
+\definecolor{oldgold}{HTML}{9E7E38}
+\colorlet{linkgold}{oldgold!85!black}
+
+
+
+% Text
 \newcommand{\titleuppercase}[1]{\textls[50]{\MakeUppercase{#1}}}
- 
+
+
+
+% Headings
+% Each numbered section opens on its own page, centered vertically.
 \titleformat{\section}[block]%
     {\large\bfseries\filcenter}%
     {\mdseries\thesection}%
     {1em}%
     {\titleuppercase}
- 
+
 \let\sectionstyle\section
 \RenewDocumentCommand{\section}{s o m}{%
     \IfBooleanTF{#1}{%
@@ -21,41 +36,35 @@
         \vspace*{\fill}%
     }%
 }
- 
+
 \titleformat{\subsection}[block]%
     {\normalsize\bfseries}%
     {\mdseries\thesubsection}%
     {1em}%
     {\titleuppercase}
- 
+
+
+
+% Mathematics
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\Z}{\mathbb{Z}}
- 
+
 \renewcommand{\proofname}{\upshape\bfseries Proof}
 \theoremstyle{definition}
 \newtheorem*{exercise}{Exercise}
- 
-\NewTColorBox{panel}{o}{
-    enhanced, unbreakable,
-    frame hidden, boxrule = 0pt, colback = black!3,
-    borderline west = {1pt}{0pt}{black!75},
-    sharp corners,
-    left = 16pt, right = 16pt, top = 12pt, bottom = 12pt,
-    before skip = 14pt, after skip = 14pt,
-    before upper = {%
-        \IfValueT{#1}{%
-            {\small\bfseries\color{black!70}\titleuppercase{#1}\par}%
-            \nointerlineskip
-            \vspace{7pt}%
-            {\color{black!20}\hrule height 0.4pt}%
-            \nointerlineskip
-            \vspace{7pt}%
-        }%
-    }
-}
- 
- 
- 
+
+
+
+% Panels
+% A panel is a shaded box with a dark left border and an optional heading.
+% An annotated panel adds a gold column on the right for the annotation.
+\newlength{\annotationwidth}
+\setlength{\annotationwidth}{0.36\textwidth}
+\newlength{\annotationgap}
+\setlength{\annotationgap}{32pt}
+
+% Heading text, rule, and spacing.
+% #1: heading color, #2: rule color, #3: heading text.
 \newcommand{\panelheading}[3]{%
     {\small\bfseries\color{#1}\titleuppercase{#3}\par}%
     \nointerlineskip
@@ -64,25 +73,26 @@
     \nointerlineskip
     \vspace{7pt}%
 }
- 
-\definecolor{oldgold}{HTML}{9E7E38}
- 
-\newlength{\annotationwidth}
-\setlength{\annotationwidth}{0.36\textwidth}
- 
+
 \tcbset{
-    annotated/.style = {
+    panelbase/.style = {
         enhanced, unbreakable,
         frame hidden, boxrule = 0pt, sharp corners,
-        sidebyside, sidebyside align = top, lower separated = false,
-        sidebyside gap = 32pt, righthand width = \annotationwidth,
         colback = black!3,
+        borderline west = {1pt}{0pt}{black!75},
         left = 16pt, right = 16pt, top = 12pt, bottom = 12pt,
-        before skip = 14pt, after skip = 14pt,
+        before skip = 14pt, after skip = 14pt
+    },
+    annotated/.style = {
+        panelbase,
+        sidebyside, sidebyside align = top, lower separated = false,
+        sidebyside gap = \annotationgap,
+        righthand width = \annotationwidth,
         underlay = {%
             \begin{tcbclipinterior}
                 \fill[oldgold!15]
-                    ([xshift = -\annotationwidth - 32pt]interior.north east)
+                    ([xshift = -\annotationwidth - \annotationgap]%
+                        interior.north east)
                     rectangle (interior.south east);
             \end{tcbclipinterior}%
         },
@@ -91,11 +101,20 @@
         }
     }
 }
- 
+
+% Usage: \begin{panel}[Heading]{Content}\end{panel}
+\NewTColorBox{panel}{o}{
+    panelbase,
+    before upper = {%
+        \IfValueT{#1}{\panelheading{black!70}{black!20}{#1}}%
+    }
+}
+
+% Usage: \begin{annotatedpanel}[Heading]{Content}{Annotation}
+%        \end{annotatedpanel}
 \NewDocumentEnvironment{annotatedpanel}{o m m}{%
     \begin{tcolorbox}[
         annotated,
-        borderline west = {1pt}{0pt}{black!75},
         before upper = {%
             \IfValueT{#1}{\panelheading{black!70}{black!20}{#1}}%
         }
@@ -103,17 +122,5 @@
         #2
         \tcblower
         \small #3
-    \end{tcolorbox}%
-}{}
- 
-\NewDocumentEnvironment{annotatedtext}{m m}{%
-    \begin{tcolorbox}[
-        annotated,
-        colback = white, left = 0pt,
-        before upper = {\panelheading{white}{white}{.}}
-    ]
-        #1
-        \tcblower
-        \small #2
     \end{tcolorbox}%
 }{}

@@ -27,38 +27,42 @@
 
     \begin{panel}[Bound 1: We know $x < -4$.]{
         Then %
-        \begin{align*}{
+        \begin{align*}
                    -x &> 4\\
                -x + 1 &> 4 + 1\\
-                1 - x &> 5\\
-            (1 - x)^2 &> 5^2\\
-            (1 - x)^2 &> 25.
-        }
+                1 - x &> 5.
         \end{align*}
+        Since both sides are positive, squaring preserves the inequality. %
+        Thus, %
+        \[
+            (1 - x)^2 > 5^2 = 25.
+        \]
     }
     \end{panel}
 
     \begin{panel}[Bound 2: We know $y > 2$.]{
         Then %
-        \begin{align*}{
+        \begin{align*}
                     -y &< -2\\
                 -y - 2 &< -2 - 2\\
-                -2 - y &< -4\\
-            (-2 - y)^2 &> (-4)^2\\
-            (-2 - y)^2 &> 16.
-        }
+                -2 - y &< -4.
         \end{align*}
+        Since both sides are negative, squaring reverses the inequality. %
+        Thus, %
+        \[
+            (-2 - y)^2 > (-4)^2 = 16.
+        \]
     }
     \end{panel}
 
     \begin{panel}[Combining the bounds.]{
-        By the first and second bounds, %
-        \begin{align*}{
+        By Bounds 1 and 2, %
+        \begin{align*}
             d &= \sqrt{(1 - x)^2 + (-2 - y)^2}\\
               &> \sqrt{25 + 16}\\
               &= \sqrt{41}\\
-              &\geq 6.
-        }
+              &> \sqrt{36}\\
+              &= 6.
         \end{align*}
     }
     \end{panel}

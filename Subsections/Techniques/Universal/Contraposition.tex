@@ -7,8 +7,9 @@
 A proof by contraposition proves a conditional statement by proving an %
 equivalent statement instead. %
 Precisely, it proves a universal conditional statement, %
-$\forall s \in S$, if $P(s)$, then $Q(s)$, by proving its contrapositive: %
-if $\neg Q(s)$, then $\neg P(s)$. %
+``$\forall s \in S$, if $P(s)$, then $Q(s)$,'' %
+by proving its contrapositive, %
+``$\forall s \in S$, if $\neg Q(s)$, then $\neg P(s)$.'' %
 Generally, a proof by contraposition mirrors the following format:
 \begin{enumerate}{
     \item \textbf{Setup.} %
@@ -44,13 +45,13 @@ Generally, a proof by contraposition mirrors the following format:
     This statement can be proven by contraposition.
 
     \begin{annotatedpanel}[Setup.]{
-        We prove the contrapositive: if $z$ is odd, then $z^2$ is odd. %
+        Consider the contrapositive: if $z$ is odd, then $z^2$ is odd. %
         Let $z \in \Z$ such that $z$ is odd. %
         Then $z = 2k + 1$ with $k \in \Z$.
     }{
         \textbf{Step 1.} Let $s \in S$ be arbitrary and assume that %
         $\neg Q(s)$ is true. %
-        Here, $P(z)$ is the statement that $z^2$ is even, %
+        Here, $S = \Z$, $s = z$, $P(z)$ is the statement that $z^2$ is even, %
         $Q(z)$ is the statement that $z$ is even, %
         and so $\neg Q(z)$ is the statement that $z$ is odd.
     }
@@ -58,14 +59,14 @@ Generally, a proof by contraposition mirrors the following format:
 
     \begin{annotatedpanel}[Verification.]{
         Then %
-        \begin{align*}{
+        \begin{align*}
             z^2 &= (2k + 1)^2\\
                 &= 4k^2 + 4k + 1\\
                 &= 2(2k^2 + 2k) + 1.
-        }
         \end{align*}
         Let $m \in \Z$ such that $m = 2k^2 + 2k$. %
-        Then $z^2 = 2(2k^2 + 2k) + 1 = 2m + 1$.
+        Then $z^2 = 2(2k^2 + 2k) + 1 = 2m + 1$. %
+        Thus, $z^2$ is odd.
     }{
         \textbf{Step 2.} Show that $\neg P(s)$ is true. %
         Here, $\neg P(z)$ is the statement that $z^2$ is odd, %
@@ -74,13 +75,13 @@ Generally, a proof by contraposition mirrors the following format:
     \end{annotatedpanel}
 
     \begin{annotatedpanel}[Conclusion.]{
-        Thus, if $z$ is odd, then $z^2$ is odd, %
+        Thus, $\forall z \in \Z$, if $z$ is odd, then $z^2$ is odd, %
         so the contrapositive holds. %
         Therefore, the statement holds by contraposition. \qedhere
     }{
         \textbf{Step 3.} Conclude the proof. %
         Here, the summary states what has been found: %
-        the conditional $\neg Q(z) \to \neg P(z)$ holds.
+        the contrapositive, if $\neg Q(z)$, then $\neg P(z)$, holds.
     }
     \end{annotatedpanel}
 }

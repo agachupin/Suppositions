@@ -23,14 +23,13 @@
         Let $m, n \in \Z$ with $(m, n)$ inside the circle. %
         Let $d$ denote the distance from $(0, 0)$ to $(m, n)$. %
         By the Euclidean distance formula, %
-        \begin{align*}{
+        \begin{align*}
             d &= \sqrt{(m - 0)^2 + (n - 0)^2}\\
               &= \sqrt{m^2 + n^2}\\
               &< r.
-        }
         \end{align*}
         Thus, $m^2 + n^2 < r^2$. %
-        Since $m$ and $n$ are integers, each is either $0$ or nonzero. %
+        Each of $m$ and $n$ is either $0$ or nonzero. %
         Therefore, we consider three cases: both are $0$, %
         exactly one is $0$, or neither is $0$.
     }
@@ -46,22 +45,22 @@
     \begin{panel}[Case 2: Suppose exactly one of $m$ and $n$ is $0$.]{
         Then $d = \sqrt{m^2 + n^2}$ is the absolute value of the nonzero %
         coordinate of $(m, n)$, so $d \in \Z$ with $d > 0$. %
-        Thus, $(m, n)$ is one of the points %
+        Thus, $(m, n)$ belongs to the group of points %
         \[
             (d, 0), \quad (-d, 0), \quad (0, d), \quad (0, -d).
         \]
         These are four distinct lattice points, since $d \neq 0$. %
         Each point is at distance $d < r$ from the origin, %
         so all four points are inside the circle. %
-        Since $d$ is determined by the point, no point belongs to two of %
-        these groups. %
+        Since $d$ is determined by the point, no point belongs to two %
+        different groups. %
         Therefore, the lattice points in this case form separate groups %
         of $4$.
     }
     \end{panel}
 
     \begin{panel}[Case 3: Suppose $m \neq 0$ and $n \neq 0$.]{
-        Then $(m, n)$ is one of the points %
+        Then $(m, n)$ belongs to the group of points %
         \[
             (|m|, |n|), \quad (-|m|, |n|), \quad
             (|m|, -|n|), \quad (-|m|, -|n|).
@@ -71,7 +70,7 @@
         Each point is at distance $d < r$ from the origin, %
         so all four points are inside the circle. %
         Since the pair $(|m|, |n|)$ is determined by the point, %
-        no point belongs to two of these groups. %
+        no point belongs to two different groups. %
         Therefore, the lattice points in this case form separate groups %
         of $4$.
     }
@@ -81,7 +80,7 @@
         Since $m^2 + n^2 < r^2$ implies $|m| < r$ and $|n| < r$, %
         only finitely many lattice points are inside the circle. %
         Since the lattice points in Cases 2 and 3 form separate groups %
-        of $4$, $\exists k \in \Z$ with $k \geq 0$ such that they total %
+        of $4$, $\exists k \in \Z$ with $k \ge 0$ such that they total %
         $4k$ points. %
         Adding the $1$ point from Case 1, %
         the circle contains $4k + 1$ lattice points.

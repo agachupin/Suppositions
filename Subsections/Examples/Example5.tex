@@ -21,12 +21,14 @@
     \begin{panel}[Part 1: Proving $f$ has a left inverse.]{
         Let $f \colon A \to B$ be an injective function. %
         Since $A$ is nonempty, $\exists a_0 \in A$. %
-        Let $g \colon B \to A$ be the function defined $\forall b \in B$ by %
+        This $a_0$ serves as the output of $g$ for elements of $B$ that %
+        are not outputs of $f$. %
+        Let $g \colon B \to A$ be the function defined for each $b \in B$ by %
         \[
             g(b) =
             \begin{cases}
-                a & \text{if } \exists a \in A \text{ such that } b = f(a), \\
-                a_0 & \text{if } \nexists a \in A \text{ such that } b = f(a).
+                a & \text{if } b = f(a) \text{ for some } a \in A, \\
+                a_0 & \text{if } b \neq f(a) \text{ for every } a \in A.
             \end{cases}
         \]
         Because $f$ is injective, $\forall b \in B$, %
@@ -37,19 +39,21 @@
         so $g$ is a function.
 
         To prove $g$ is a left inverse of $f$, let $a \in A$. %
-        By the definition of $g$, %
+        Then $f(a)$ falls in the first case of $g$, %
+        and $a$ is the only element of $A$ that $f$ sends to $f(a)$. %
+        Thus, by the definition of $g$, %
         \[
             g(f(a)) = a.
         \]
         Because $g(f(a)) = a$ holds $\forall a \in A$, %
-        $g$ is a valid left inverse of $f$.
+        $g$ is a left inverse of $f$.
     }
     \end{panel}
 
     \begin{panel}[Part 2: Proving $f$ is injective.]{
         Let $f \colon A \to B$ be a function and %
         $g \colon B \to A$ a left inverse of $f$. %
-        Then $\forall a \in A$, %
+        By the definition of a left inverse, $\forall a \in A$, %
         \[
             (g \circ f)(a) = g(f(a)) = a.
         \]
@@ -58,13 +62,15 @@
         \[
             a_1 = g(f(a_1)) = g(f(a_2)) = a_2.
         \]
-        Thus, $\forall a_1, a_2 \in A$, if $f(a_1) = f(a_2)$, then $a_1 = a_2$. %
-        Therefore, $f$ is injective.
+        Thus, $\forall a_1, a_2 \in A$, if $f(a_1) = f(a_2)$, %
+        then $a_1 = a_2$. %
+        Therefore, $f$ is %
+        \hyperref[subsections:techniques:universal:injective]{injective}.
     }
     \end{panel}
 
-    Thus, there is a left inverse when $f$ is injective, %
-    and $f$ is an injective function when there is a left inverse. %
+    Thus, if $f$ is injective, then $f$ has a left inverse, %
+    and if $f$ has a left inverse, then $f$ is injective. %
     Therefore, the statement holds.
 }
 \end{proof}

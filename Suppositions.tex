@@ -16,7 +16,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 
-\usepackage[hidelinks]{hyperref}
+\usepackage[colorlinks, hypertexnames = false]{hyperref}
 
 \input{Commands}
 
@@ -31,11 +31,12 @@
 \newcommand{\portfolioinstitution}{Wake Forest University}
 \newcommand{\portfolioabstract}{%
     This document examines standard proof techniques found in discrete %
-    mathematics. It combines meticulous explanations with example %
-    applications to accessibly define and demonstrate each approach.%
+    mathematics. It explains each technique, outlines its general format, %
+    and demonstrates it with an annotated example.%
 }
 
 \newcommand{\portfolioyear}{2026}
+\newcommand{\portfoliodate}{November 23, 2026}
 \newcommand{\portfoliolicense}{CC BY-NC-SA 4.0}
 \newcommand{\portfoliolicenseurl}{%
     https://creativecommons.org/licenses/by-nc-sa/4.0%
@@ -69,7 +70,9 @@
     bookmarksopen       = {true},
     linktoc             = {all},
     pdfpagelayout       = {OneColumn},
-    pdfstartview        = {FitH}
+    pdfstartview        = {FitH},
+    linkcolor           = {linkgold},
+    urlcolor            = {linkgold}
 }
 
 
@@ -96,7 +99,7 @@
     \vspace{0.5ex}
     {\titleuppercase{\portfolioinstitution}\par}
     \vspace{2ex}
-    {\titleuppercase{\today}\par}
+    {\titleuppercase{\portfoliodate}\par}
 
     \vfill
     {\small \titleuppercase{\portfoliocopyright}\par}
@@ -109,13 +112,6 @@
 
 
 
-\begin{abstract}{
-    \portfolioabstract
-}
-\end{abstract}
-
-
-
 \pagestyle{empty}
 \pagenumbering{roman}
 \clearpage
@@ -123,7 +119,18 @@
 \vspace{1ex}
 \portfolioacknowledgments
 \clearpage
-\tableofcontents
+
+
+
+\begin{abstract}{
+    \portfolioabstract
+}
+\end{abstract}
+
+
+
+\clearpage
+{\hypersetup{linkcolor = {black}}\tableofcontents}
 \clearpage
 \pagestyle{plain}
 \pagenumbering{arabic}
@@ -131,13 +138,13 @@
 
 
 \section{Existential Statements}
-\label{subsections:techniques:existential}
+\label{sections:techniques:existential}
 \include{Subsections/Techniques/Existential/Construction}
 
 
 
 \section{Universal Statements}
-\label{subsections:techniques:universal}
+\label{sections:techniques:universal}
 \include{Subsections/Techniques/Universal/Exhaustion}
 \include{Subsections/Techniques/Universal/Direct}
 \include{Subsections/Techniques/Universal/Cases}
@@ -151,7 +158,7 @@
 
 
 \section{Example Problems}
-\label{subsections:examples}
+\label{sections:examples}
 \include{Subsections/Examples/Example1}
 \include{Subsections/Examples/Example2}
 \include{Subsections/Examples/Example3}

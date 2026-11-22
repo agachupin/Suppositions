@@ -7,11 +7,11 @@
 A proof of surjectivity proves that a function is onto, %
 meaning that every element of the codomain is an output. %
 Precisely, it proves that a function $f \colon X \to Y$ satisfies %
-$\forall y \in Y$, $\exists x \in X$ such that $f(x) = y$. %
+``$\forall y \in Y$, $\exists x \in X$ such that $f(x) = y$.'' %
 Generally, a proof of surjectivity mirrors the following format:
 \begin{enumerate}{
     \item \textbf{Setup.} %
-        Let $y \in Y$.
+        Let $y \in Y$ be arbitrary.
     \item \textbf{Verification.} %
         Define $x$ in terms of $y$ such that $x \in X$, %
         and show that $f(x) = y$.
@@ -45,14 +45,14 @@ Generally, a proof of surjectivity mirrors the following format:
     \begin{annotatedpanel}[Setup.]{
         Let $y \in \R$.
     }{
-        \textbf{Step 1.} Let $y \in Y$. %
+        \textbf{Step 1.} Let $y \in Y$ be arbitrary. %
         Here, $Y = \R$.
     }
     \end{annotatedpanel}
 
     \begin{annotatedpanel}[Verification.]{
         Let $x \in \R$ such that $x = \frac{y - 1}{2}$. %
-        Then $f(x) = 2\left(\frac{y - 1}{2}\right) + 1 = y$.
+        Then $f(x) = 2\left(\frac{y - 1}{2}\right) + 1 = (y - 1) + 1 = y$.
     }{
         \textbf{Step 2.} Define $x$ in terms of $y$ such that $x \in X$, %
         and show that $f(x) = y$. %

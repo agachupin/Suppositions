@@ -7,16 +7,17 @@
 A proof by exhaustion proves a mathematical statement by checking every %
 possible case. %
 Precisely, it proves a universal statement, %
-$\forall s \in S,\ P(s)$, where $S$ is finite, by listing every element %
+``$\forall s \in S,\ P(s)$,'' where $S$ is finite, by listing every element %
 of $S$ and showing that $P(s)$ is true for each one. %
 It is effectively a %
 \hyperref[subsections:techniques:universal:cases]{%
-    proof by division into cases}, %
-but with specific elements instead of broad definitions for elements. %
+    proof by division into cases} %
+in which each case is a single element. %
 Generally, a proof by exhaustion mirrors the following format:
 \begin{enumerate}{
     \item \textbf{Setup.} %
-        Define $S = \{s_1, \dots, s_n\}$ and let $s \in S$.
+        List the elements of $S$ as $S = \{s_1, \dots, s_n\}$ %
+        and let $s \in S$.
     \item \textbf{Verification.} %
         For each $s_i$, suppose $s = s_i$ and show that $P(s_i)$ is true.
     \item \textbf{Conclusion.} %
@@ -29,10 +30,10 @@ Generally, a proof by exhaustion mirrors the following format:
 \paragraph{Advice.}
 \begin{itemize}{
     \item Use this proof only for a universal statement, %
-        $\forall s \in S,\ P(s)$, when $S$ is finite and small enough to %
+        ``$\forall s \in S,\ P(s)$,'' when $S$ is finite and small enough to %
         check element by element. %
         This proof cannot be used when $S$ is infinite.
-    \item Show $P(s_i)$ for every element of $S$, as any unaccounted for %
+    \item Show $P(s_i)$ for every element of $S$, as any unaccounted-for %
         element leaves the statement unproven.
 }
 \end{itemize}
@@ -51,8 +52,8 @@ Generally, a proof by exhaustion mirrors the following format:
         Let $K = \{1, 2\}$. %
         Let $k \in K$.
     }{
-        \textbf{Step 1.} Define $S$ and let $s \in S$. %
-        Here, $S = K = \{1, 2\}$, so $s_1 = 1$ and $s_2 = 2$, %
+        \textbf{Step 1.} List the elements of $S$ and let $s \in S$. %
+        Here, $S = K = \{1, 2\}$, with $s_1 = 1$ and $s_2 = 2$, %
         and $s = k$.
     }
     \end{annotatedpanel}
@@ -75,7 +76,7 @@ Generally, a proof by exhaustion mirrors the following format:
     }{
         \textbf{Step 3.} Conclude the proof. %
         Here, the summary states what has been found: %
-        $P(k)$ holds for both elements.
+        $P(k)$ holds for both elements of $K$.
     }
     \end{annotatedpanel}
 }

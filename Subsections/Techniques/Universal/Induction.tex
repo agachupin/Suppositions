@@ -4,15 +4,16 @@
 
 
 \paragraph{Description.}
-A proof by mathematical induction proves a mathematical statement by showing that it %
-holds for a first case and that each case implies the next. %
+A proof by mathematical induction proves a mathematical statement by %
+showing that it holds for a first case and that each case implies the %
+next. %
 Precisely, it proves a universal statement, %
-$\forall z \in \Z$ with $z \ge z_0$, $P(z)$, %
-by showing that $P(z_0)$ is true and that $\forall z \in \Z$ with %
-$z \ge z_0$, if $P(z)$, then $P(z + 1)$. %
+``$\forall z \in \Z$ with $z \ge z_0$, $P(z)$,'' %
+by showing that $P(z_0)$ is true and that %
+``$\forall z \in \Z$ with $z \ge z_0$, if $P(z)$, then $P(z + 1)$.'' %
 Generally, a proof by mathematical induction mirrors the following format:
 \begin{enumerate}{
-    \item \textbf{Setup.} %
+    \item \textbf{Setup (Optional).} %
         Define the statement $P(z)$ and identify the smallest case $z_0$.
     \item \textbf{Base Case.} %
         Let $z \in \Z$ such that $z = z_0$ and show that $P(z_0)$ is true.
@@ -21,7 +22,7 @@ Generally, a proof by mathematical induction mirrors the following format:
     \item \textbf{Inductive Step.} %
         Show that $P(z + 1)$ is true by using the inductive hypothesis.
     \item \textbf{Conclusion.} %
-        Conclude the proof by acknowledging the principle of mathematical %
+        Conclude the proof by citing the principle of mathematical %
         induction, optionally by summarizing what has been found.
 }
 \end{enumerate}
@@ -31,14 +32,14 @@ Generally, a proof by mathematical induction mirrors the following format:
 \paragraph{Advice.}
 \begin{itemize}{
     \item Use this proof when $P(z + 1)$ can be related to $P(z)$. %
-        A summation sign is a common indication of induction.
-    \item The inductive hypothesis always follows the same format, %
-        assuming $P(z)$ for an arbitrary $z \ge z_0$. %
-        This is a common source of confusion, as $P(z)$ is assumed %
-        rather than proven.
+        A summation sign often indicates that induction will work.
+    \item The inductive hypothesis always has the same form: %
+        assume $P(z)$ for an arbitrary $z \ge z_0$. %
+        This step is a common source of confusion, as $P(z)$ is assumed %
+        here rather than proven.
     \item In the inductive step, relate $P(z + 1)$ back to $P(z)$ to use %
         the inductive hypothesis, without assuming $P(z + 1)$. %
-        Optionally, list what is to be proven before doing so.
+        Optionally, state what is to be proven before doing so.
 }
 \end{itemize}
 
@@ -52,6 +53,7 @@ Generally, a proof by mathematical induction mirrors the following format:
 \end{exercise}
 \begin{proof}{
     This statement can be proven by mathematical induction.
+
     \begin{annotatedpanel}[Setup.]{
         Let $P(z)$ be the statement that
         \[
@@ -61,25 +63,29 @@ Generally, a proof by mathematical induction mirrors the following format:
     }{
         \textbf{Step 1.} Define $P(z)$ and identify the smallest case %
         $z_0$. %
-        Here, $z_0 = 1$, as the exercise requires $z \ge 1$.
+        Here, $z_0 = 1$, as the exercise requires $z \ge 1$. %
+        This step is optional and is used here to streamline the proof %
+        by naming the statement and its smallest case once.
     }
     \end{annotatedpanel}
+
     \begin{annotatedpanel}[Base Case.]{
         Let $z \in \Z$ such that $z = 1$. %
         Then
-        \begin{align*}{
+        \begin{align*}
             \sum_{i=1}^{z} i &= \sum_{i=1}^{1} i = 1,\\
             \frac{z(z + 1)}{2} &= \frac{1(1 + 1)}{2}
                 = \frac{1(2)}{2} = \frac{2}{2} = 1.
-        }
         \end{align*}
-        Thus, $1 = 1$, so $P(1)$ is true.
+        Thus, both sides equal $1$, so $P(1)$ is true.
     }{
         \textbf{Step 2.} Let $z \in \Z$ such that $z = z_0$ and show that %
         $P(z_0)$ is true. %
-        Here, $z_0 = 1$ is the smallest possible case based on $z \ge 1$.
+        Here, $z_0 = 1$ from Step 1, %
+        and each side of $P(1)$ is evaluated separately.
     }
     \end{annotatedpanel}
+
     \begin{annotatedpanel}[Inductive Hypothesis.]{
         Let $z \in \Z$ such that $z \ge 1$ and $P(z)$ is true.
     }{
@@ -89,6 +95,7 @@ Generally, a proof by mathematical induction mirrors the following format:
         assumed rather than proven.
     }
     \end{annotatedpanel}
+
     \begin{annotatedpanel}[Inductive Step.]{
         Consider $P(z + 1)$. %
         We want to prove that
@@ -100,30 +107,33 @@ Generally, a proof by mathematical induction mirrors the following format:
             \sum_{i=1}^{z+1} i = (z + 1) + \sum_{i=1}^{z} i.
         \]
         By the inductive hypothesis,
-        \begin{align*}{
+        \begin{align*}
             \sum_{i=1}^{z+1} i &= (z + 1) + \frac{z(z + 1)}{2}\\
                 &= (z + 1) + \frac{z^2 + z}{2}\\
                 &= \frac{2z + 2}{2} + \frac{z^2 + z}{2}\\
                 &= \frac{z^2 + 3z + 2}{2}\\
-                &= \frac{(z + 1)(z + 2)}{2}.
-        }
+                &= \frac{(z + 1)(z + 2)}{2}\\
+                &= \frac{(z + 1)((z + 1) + 1)}{2}.
         \end{align*}
         Thus, $P(z + 1)$ is true.
     }{
         \textbf{Step 4.} Show that $P(z + 1)$ is true by using the %
         inductive hypothesis. %
-        Here, the sum splits into $z + 1$ and the sum up to $z$, %
-        which the inductive hypothesis replaces. %
-        The line beginning ``We want to prove'' is optional.
+        Here, the sum splits into its last term, $z + 1$, %
+        and the sum up to $z$, which the inductive hypothesis replaces. %
+        The final line matches the statement to be proven. %
+        Stating that goal first, as in ``We want to prove that \dots,'' %
+        is optional.
     }
     \end{annotatedpanel}
+
     \begin{annotatedpanel}[Conclusion.]{
         Thus, $\forall z \in \Z$ with $z \ge 1$, %
         $\displaystyle\sum_{i=1}^{z} i = \frac{z(z + 1)}{2}$. %
         Therefore, the statement holds by the principle of mathematical %
         induction. \qedhere
     }{
-        \textbf{Step 5.} Conclude the proof by acknowledging the principle %
+        \textbf{Step 5.} Conclude the proof by citing the principle %
         of mathematical induction. %
         Here, the summary states what has been found: %
         $P(1)$ is true, and $P(z + 1)$ is true whenever $P(z)$ is true.

@@ -4,10 +4,10 @@
 
 
 \paragraph{Description.}
-A proof by construction proves a mathematical statement by showing %
-something to exist via an example. %
+A proof by construction proves a mathematical statement by finding %
+an example that satisfies it. %
 Precisely, it proves an existential statement, %
-$\exists s \in S$ such that $P(s)$, by defining a particular element %
+``$\exists s \in S$ such that $P(s)$,'' by defining a particular element %
 $s_0 \in S$ and showing that $P(s_0)$ is true. %
 Generally, a proof by construction mirrors the following format:
 \begin{enumerate}{
@@ -25,11 +25,14 @@ Generally, a proof by construction mirrors the following format:
 \paragraph{Advice.}
 \begin{itemize}{
     \item Use this proof only for an existential statement, %
-        $\exists s \in S$ such that $P(s)$, %
+        ``$\exists s \in S$ such that $P(s)$,'' %
         when an example can be found explicitly. %
-        This proof cannot be used to prove a universal statement, %
+        This proof cannot be used to prove a %
+        \hyperref[sections:techniques:universal]{universal statement}, %
         since one example does not cover every element of $S$.
-    \item Show both $s_0 \in S$ and $P(s_0)$.
+    \item Show both $s_0 \in S$ and $P(s_0)$, %
+        as an element outside of $S$ does not prove the statement, %
+        even if $P(s_0)$ is true.
 }
 \end{itemize}
 
@@ -44,11 +47,10 @@ Generally, a proof by construction mirrors the following format:
     This statement can be proven by construction.
 
     \begin{annotatedpanel}[Setup.]{
-        Since $2 \in \Z$, let $z \in \Z$ such that $z = 2$.
+        Let $z \in \Z$ such that $z = 2$.
     }{
         \textbf{Step 1.} Define $s_0$ such that $s_0 \in S$. %
-        Here, $s_0 = 2$ and $S = \Z$, and $2 \in \Z$ shows that %
-        $s_0 \in S$.
+        Here, $S = \Z$ and $s_0 = z = 2$, which is an integer.
     }
     \end{annotatedpanel}
 
@@ -66,7 +68,7 @@ Generally, a proof by construction mirrors the following format:
     }{
         \textbf{Step 3.} Conclude the proof. %
         Here, the summary states what has been found: %
-        $s_0 = 2$ satisfies $P$.
+        $z = 2$ is an integer such that $z^2 = 4$.
     }
     \end{annotatedpanel}
 }
